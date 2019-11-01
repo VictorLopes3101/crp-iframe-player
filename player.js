@@ -2,8 +2,8 @@ window.addEventListener("message", function(e) {
 
 		console.log(e);
 
-		var video_config_media = JSON.parse(e.data.data);
-		var user_lang = "ptBR";
+		var video_config_media = JSON.parse(e.data.video_config_media);
+		var user_lang = e.data.lang;
 		var video_stream_url = "";
 		var video_id = video_config_media['metadata']['id'];
 
