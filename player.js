@@ -1,7 +1,9 @@
 function onloadfunction() {
 
-		var video_config_media = JSON.parse(result.key_video_config_media);
-		var user_lang = result.user_lang;
+	window.addEventListener("message", function(e) {
+
+		var video_config_media = JSON.parse(e);
+		var user_lang = "ptBR";
 		var video_stream_url = "";
 		var video_id = video_config_media['metadata']['id'];
 
@@ -37,5 +39,6 @@ function onloadfunction() {
    				localStorage.setItem(video_id, jwplayer().getPosition());
    			}
  		}, 5000);
+	}
 }
 window.onload = onloadfunction;
