@@ -38,26 +38,27 @@ window.jwplayer = function(t) {
                 }));
                 e.push(n[2] = o);
                 var u, a = document.createElement("script");
+                var u, a = document.createElement("script");
                 a.charset = "utf-8", a.timeout = 55, i.nc && a.setAttribute("nonce", i.nc), a.src = function(t) {
-                    return ({
-                        1: chrome.extension.getURL("assets/jwplayer/js/jwplayer.controls"),
-                        2: chrome.extension.getURL("assets/jwplayer/js/jwplayer.core"),
-                        3: chrome.extension.getURL("assets/jwplayer/js/jwplayer.core.controls"),
-                        4: chrome.extension.getURL("assets/jwplayer/js/jwplayer.core.controls.html5"),
-                        5: chrome.extension.getURL("assets/jwplayer/js/jwplayer.core.controls.polyfills"),
-                        6: chrome.extension.getURL("assets/jwplayer/js/jwplayer.core.controls.polyfills.html5"),
-                        7: chrome.extension.getURL("assets/jwplayer/js/jwplayer.vr"),
-                        8: chrome.extension.getURL("assets/jwplayer/js/polyfills.intersection-observer"),
-                        9: chrome.extension.getURL("assets/jwplayer/js/polyfills.webvtt"),
-                        10: chrome.extension.getURL("assets/jwplayer/js/provider.airplay"),
-                        11: chrome.extension.getURL("assets/jwplayer/js/provider.cast"),
-                        12: chrome.extension.getURL("assets/jwplayer/js/provider.flash"),
-                        13: chrome.extension.getURL("assets/jwplayer/js/provider.hlsjs"),
-                        14: chrome.extension.getURL("assets/jwplayer/js/provider.hlsjs-progressive"),
-                        15: chrome.extension.getURL("assets/jwplayer/js/provider.html5"),
-                        16: chrome.extension.getURL("assets/jwplayer/js/provider.shaka"),
-                        17: chrome.extension.getURL("assets/jwplayer/js/related"),
-                        18: chrome.extension.getURL("assets/jwplayer/js/vttparser")
+                    return i.p + "" + ({
+                        1: "jwplayer.controls",
+                        2: "jwplayer.core",
+                        3: "jwplayer.core.controls",
+                        4: "jwplayer.core.controls.html5",
+                        5: "jwplayer.core.controls.polyfills",
+                        6: "jwplayer.core.controls.polyfills.html5",
+                        7: "jwplayer.vr",
+                        8: "polyfills.intersection-observer",
+                        9: "polyfills.webvtt",
+                        10: "provider.airplay",
+                        11: "provider.cast",
+                        12: "provider.flash",
+                        13: "provider.hlsjs",
+                        14: "provider.hlsjs-progressive",
+                        15: "provider.html5",
+                        16: "provider.shaka",
+                        17: "related",
+                        18: "vttparser"
                     } [t] || t) + ".js"
                 }(t), u = function(e) {
                     a.onerror = a.onload = null, clearTimeout(c);
