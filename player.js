@@ -39,6 +39,6 @@ function onloadfunction() {
    				localStorage.setItem(video_id, jwplayer().getPosition());
    			}
  		}, 5000);
-	}
+	});
 }
 window.onload = onloadfunction;
