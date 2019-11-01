@@ -2,6 +2,8 @@ function onloadfunction() {
 
 	window.addEventListener("message", function(e) {
 
+		console.log(e);
+
 		var video_config_media = JSON.parse(e);
 		var user_lang = "ptBR";
 		var video_stream_url = "";
