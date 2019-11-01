@@ -1,5 +1,4 @@
 function onloadfunction() {
-	chrome.storage.local.get(['key_video_config_media','user_lang'], function(result) {
 
 		var video_config_media = JSON.parse(result.key_video_config_media);
 		var user_lang = result.user_lang;
@@ -38,6 +37,5 @@ function onloadfunction() {
    				localStorage.setItem(video_id, jwplayer().getPosition());
    			}
  		}, 5000);
-    });
 }
 window.onload = onloadfunction;
