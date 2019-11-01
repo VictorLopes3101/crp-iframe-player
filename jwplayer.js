@@ -4507,17 +4507,7 @@ window.jwplayer = function(t) {
     }
 
     function O(t) {
-        var e = "file:" === window.location.protocol ? "https:" : "",
-            n = {
-                jwpsrv: chrome.extension.getURL("assets/jwplayer/js/jwpsrv.js"),
-                dai: chrome.extension.getURL("assets/jwplayer/js/dai.js"),
-                vast: chrome.extension.getURL("assets/jwplayer/js/vast.js"),
-                googima: chrome.extension.getURL("assets/jwplayer/js/googima.js"),
-                freewheel: chrome.extension.getURL("assets/jwplayer/js/freewheel.js"),
-                gapro: chrome.extension.getURL("assets/jwplayer/js/gapro.js")
-            } [t];
-        return n ? e + n : ""
-    }
+        var e = "file:" === window.location.protocol ? "https:" : "", n = { jwpsrv: "//ssl.p.jwpcdn.com/player/v/8.11.5/jwpsrv.js", dai: "//ssl.p.jwpcdn.com/player/plugins/dai/v/0.4.9/dai.js", vast: "//ssl.p.jwpcdn.com/player/plugins/vast/v/8.7.3/vast.js", googima: "//ssl.p.jwpcdn.com/player/plugins/googima/v/8.7.2/googima.js", freewheel: "//ssl.p.jwpcdn.com/player/plugins/freewheel/v/2.2.6/freewheel.js", gapro: "//ssl.p.jwpcdn.com/player/plugins/gapro/v/2.1.5/gapro.js" } [t]; return n ? e + n : "" }
 
     function k(t, e, n) {
         e && (t[e.client || O(n)] = e, delete e.client)
