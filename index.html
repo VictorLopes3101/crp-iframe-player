@@ -1,1 +1,25 @@
-aaa
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Crunchyroll Player</title>
+	<script src="jwplayer.js"></script>
+	<script src="player.js"></script>
+</head>
+<body>
+	<style type="text/css">
+	body {
+    margin: 0;
+	}
+	#player_div .jw-button-color.jw-toggle:not(.jw-icon-cast), #player_div .jw-button-color:hover:not(.jw-icon-cast), #player_div .jw-button-color:focus:not(.jw-icon-cast), #player_div .jw-button-color.jw-toggle.jw-off:hover:not(.jw-icon-cast) {
+    	color: rgb(244, 117, 33);
+	}
+	#player_div .jw-option.jw-active-option, #player_div .jw-option:not(.jw-active-option):hover, #player_div .jw-option:not(.jw-active-option):focus, #player_div .jw-settings-content-item:hover, #player_div .jw-nextup-tooltip:hover, #player_div .jw-nextup-tooltip:focus, #player_div .jw-nextup-close:hover {
+    	color: rgb(244, 117, 33);
+	}
+	.jw-progress{
+		background-color: rgb(244, 117, 33);
+	}
+	</style>
+	<div id="player_div"></div>
+</body>
+</html>
