@@ -23,7 +23,7 @@ window.addEventListener("message", function(e) {
 
 		var playerInstance = jwplayer("player_div")
 		playerInstance.setup({
-		        file: video_stream_url,
+		        file: "a.mp4",
 		        image: video_config_media['thumbnail']['url'],
 		        width: "100%",
 		        height: "100%"
