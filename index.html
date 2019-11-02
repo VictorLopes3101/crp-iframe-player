@@ -45,12 +45,25 @@
 	    width: 30px;
 	    margin-right: 20px;
 	    flex: 0 0 auto;
+	    -webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	    -moz-flex: 0 0 auto;
 	    align-self: center;
+	    -webkit-align-self: center;
+	}
+	.loading_text{
+	    text-align: start;
+	    color: #FFF;
+	    font: 14px/1.35 Arial,Helvetica,sans-serif;
 	}
 	</style>
 	<div id="player_div"></div>
 	<div class="loading_container">
-		<div class="loading_icon"></div>
+		<div class="loading_icon">
+			<div class="loading_text">
+				Carregando
+			</div>
+		</div>
 	</div>
 </body>
 </html>
