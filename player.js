@@ -23,7 +23,7 @@ window.addEventListener("message", function(e) {
 
 		var playerInstance = jwplayer("player_div")
 		playerInstance.setup({
-		        file: "a.mp4",
+		        file: video_stream_url,
 		        image: video_config_media['thumbnail']['url'],
 		        width: "100%",
 		        height: "100%"
@@ -33,6 +33,7 @@ window.addEventListener("message", function(e) {
 			if(localStorage.getItem(video_id) != null){
 				document.getElementsByTagName("video")[0].currentTime = localStorage.getItem(video_id);
 			}
+			document.body.querySelector(".loading_container").style.display = "none";
 		});
 		const interval = setInterval(function() {
 			if(jwplayer().getState() == "playing"){
