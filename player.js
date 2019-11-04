@@ -7,14 +7,12 @@ window.addEventListener("message", function(e) {
 		var video_stream_url = "";
 		var video_id = video_config_media['metadata']['id'];
 		var stream_array = [];
-		var stream_array_n = 0;
 
 	    for(var i = 0; i < video_config_media['streams'].length; i++)
 		{
 		  if(video_config_media['streams'][i].format == 'trailer_hls' && video_config_media['streams'][i].hardsub_lang == user_lang)
 		  {
 		    stream_array.push(video_config_media['streams'][i].url.replace("clipTo/120000/", "clipTo/" + video_config_media['metadata']['duration'] + "/"));
-		    stream_array_n++;
 		  }
 		  if(video_config_media['streams'][i].format == 'adaptive_hls' && video_config_media['streams'][i].hardsub_lang == user_lang)
 		  {
