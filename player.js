@@ -80,7 +80,7 @@ window.addEventListener("message", function(e) {
 
 		var playerInstance = jwplayer("player_div")
 		playerInstance.setup({
-		        file: video_stream_url,
+		        file: video_stream_m3u8,
 		        image: video_config_media['thumbnail']['url'],
 		        width: "100%",
 		        height: "100%"
