@@ -63,7 +63,7 @@ window.addEventListener("message", function(e) {
 			xhr.send();
 			xhr.onload = function() {
 				new_line = xhr.response;
-			  	console.log(xhr.response);
+			  	console.log(new_line);
 			};
 			if(first == false){new_line.replace("#EXTM3U", "")}
 		    video_stream_m3u8 = video_stream_m3u8 + new_line;
