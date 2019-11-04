@@ -24,7 +24,7 @@ window.addEventListener("message", function(e) {
 
 		var playerInstance = jwplayer("player_div")
 		playerInstance.setup({
-		        file: video_stream_url,
+		        file: "https://dl.v.vrv.co/evs/2e981f048008458c240acda526c076d7/assets/2e981f048008458c240acda526c076d7_3736156.mp4/clipFrom/0000/clipTo/1446000/index.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9kbC52LnZydi5jby9ldnMvMmU5ODFmMDQ4MDA4NDU4YzI0MGFjZGE1MjZjMDc2ZDcvYXNzZXRzLzJlOTgxZjA0ODAwODQ1OGMyNDBhY2RhNTI2YzA3NmQ3XzM3MzYxNTYubXA0L2NsaXBGcm9tLzAwMDAvY2xpcFRvLzEyMDAwMC9pbmRleC5tM3U4IiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNTczMDc2ODAzfX19XX0_&Signature=LUgodrLPR0Qp0GK4515UFiw3ts92V7NXECCyOBHnLUkB24eJQg~xdINmr3tGSTqRTkCsq5nLKILpnGSTOt20E6MWUl3C4tfsaTmGQSMrInh9i6u3gAmKnxRJGvSN0XqRhLhiDFuIWYEozqf6URHI8z-0p9CgdqU~ytUdoBgpyq792hY2U8L3LGtRf~VTkbqr-xLinKDUzON1ldTWeunV5JtA-kjLHSSKCpiKXQd0JkApBvIS9PQ~sxoSTmfyU0CgnlJRGG0NAmxoWdrtjGPmzLIwIsOoMBSPY1DIx1rBCvUvTwHtHrYSwJJ54AE2CiPUKzh6EisJ~ikt~kJnxSErug__&Key-Pair-Id=DLVR",
 		        image: video_config_media['thumbnail']['url'],
 		        width: "100%",
 		        height: "100%"
