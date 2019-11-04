@@ -65,7 +65,7 @@ window.addEventListener("message", function(e) {
 				new_line = xhr.response;
 			  	console.log(xhr.response);
 			};
-			if(first == false){new_line.replace("#EXTM3U", "")}
+			if(first == true){new_line.replace("#EXTM3U", "")}
 		    video_stream_m3u8 = video_stream_m3u8 + new_line;
 			first = false;
 		  }
