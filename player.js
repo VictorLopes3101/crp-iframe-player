@@ -59,7 +59,7 @@ window.addEventListener("message", function(e) {
 		  	var new_line = "";
 
 		  	var xhr = new XMLHttpRequest();
-			xhr.open('GET', video_config_media['streams'][i].url.replace("clipTo/120000/", "clipTo/" + video_config_media['metadata']['duration'] + "/").replace("index", "master"), false);
+			xhr.open('GET', video_config_media['streams'][i].url.replace("clipTo/120000/", "clipTo/" + video_config_media['metadata']['duration'] + "/").replace("index", "master"));
 			xhr.send();
 			xhr.onload = function() {
 				new_line = xhr.response;
@@ -76,7 +76,7 @@ window.addEventListener("message", function(e) {
 		  }
 		}
 
-		console.log(video_stream_m3u8);
+		console.log("aa" + video_stream_m3u8);
 
 		var playerInstance = jwplayer("player_div")
 		playerInstance.setup({
