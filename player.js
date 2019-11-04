@@ -6,13 +6,13 @@ window.addEventListener("message", function(e) {
 		var user_lang = e.data.lang;
 		var video_stream_url = "";
 		var video_id = video_config_media['metadata']['id'];
-		var stream_array = [];
 
 	    for(var i = 0; i < video_config_media['streams'].length; i++)
 		{
 		  if(video_config_media['streams'][i].format == 'trailer_hls' && video_config_media['streams'][i].hardsub_lang == user_lang)
 		  {
-		    stream_array.push(video_config_media['streams'][i].url.replace("clipTo/120000/", "clipTo/" + video_config_media['metadata']['duration'] + "/"));
+		    video_stream_url = video_config_media['streams'][i].url.replace("clipTo/120000/", "clipTo/" + video_config_media['metadata']['duration'] + "/");
+		    break;
 		  }
 		  if(video_config_media['streams'][i].format == 'adaptive_hls' && video_config_media['streams'][i].hardsub_lang == user_lang)
 		  {
@@ -20,7 +20,6 @@ window.addEventListener("message", function(e) {
 		    break;
 		  }
 		}
-		console.log(stream_array);
 
 		var playerInstance = jwplayer("player_div")
 		playerInstance.setup({
