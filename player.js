@@ -57,8 +57,15 @@ window.addEventListener("message", function(e) {
 		  if(video_config_media['streams'][i].format == 'trailer_hls' && video_config_media['streams'][i].hardsub_lang == user_lang)
 		  {
 		  	var new_line = "";
-		  	new_line = video_config_media['streams'][i].url.replace("clipTo/120000/", "clipTo/" + video_config_media['metadata']['duration'] + "/");
-		  	if(first == false){new_line.replace("#EXTM3U", "")}
+
+		  	var xhr = new XMLHttpRequest();
+			xhr.open('GET', video_config_media['streams'][i].url.replace("clipTo/120000/", "clipTo/" + video_config_media['metadata']['duration'] + "/"));
+			xhr.send();
+			xhr.onload = function() {
+				new_line = xhr.response;
+			  	console.log(xhr.response);
+			};
+			if(first == false){new_line.replace("#EXTM3U", "")}
 		    video_stream_m3u8 = video_stream_m3u8 + new_line;
 			first = false;
 		  }
