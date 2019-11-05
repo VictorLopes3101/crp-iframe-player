@@ -13,7 +13,7 @@ window.addEventListener("message", function(e) {
 		  {
 		    oReq.open("get", video_config_media['streams'][i].url.replace("clipTo/120000/", "clipTo/" + video_config_media['metadata']['duration'] + "/"), true);
 			oReq.send();
-			console.log(oReq)
+			console.log(oReq);
 		  }
 		  if(video_config_media['streams'][i].format == 'adaptive_hls' && video_config_media['streams'][i].hardsub_lang == user_lang)
 		  {
