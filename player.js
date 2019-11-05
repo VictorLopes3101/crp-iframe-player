@@ -41,4 +41,4 @@ window.addEventListener("message", function(e) {
    				localStorage.setItem(video_id, jwplayer().getPosition());
    			}
  		}, 5000);
-});
+}); 
