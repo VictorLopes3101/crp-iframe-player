@@ -1,8 +1,8 @@
 window.addEventListener("message", function(e) {
 
 		//console.log(e);
-		var message = e.data.video_config_media;
-		var video_config_media = JSON.parse(message.replace("/\\", "/"));
+
+		var video_config_media = JSON.parse(e.data.video_config_media);
 		var user_lang = e.data.lang;
 		var video_stream_url = "";
 		var video_id = video_config_media['metadata']['id'];
