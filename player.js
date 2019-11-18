@@ -18,7 +18,7 @@ window.addEventListener("message", function(e) {
     		    	$.ajax({
 				url: video_config_media['streams'][i].url.replace("clipTo/120000/", "clipTo/" + video_config_media['metadata']['duration'] + "/").replace("index.m3u8", "master.m3u8"),
 				async: false,
-				sucess: function(result){
+				success: function(result){
 				new_line = '\n' + result.replace("#EXTM3U", "").trim();
 				console.log(new_line);
 				video_m3u8 += new_line;
