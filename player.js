@@ -19,8 +19,7 @@ window.addEventListener("message", function(e) {
 				url: video_config_media['streams'][i].url.replace("clipTo/120000/", "clipTo/" + video_config_media['metadata']['duration'] + "/").replace("index.m3u8", "master.m3u8"),
 				async: false,
 				success: function(result){
-				console.log(result);
-				new_line = '\n' + result.responseText.replace("#EXTM3U", "").trim();
+				new_line = '\n' + result.replace("#EXTM3U", "").trim();
 				video_m3u8 += new_line;
 				rows_number++;
 				}
