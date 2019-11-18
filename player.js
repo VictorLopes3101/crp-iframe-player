@@ -22,11 +22,14 @@ window.addEventListener("message", function(e) {
 				success: function(result){
 				new_line = '\n' + result.replace("#EXTM3U", "").trim();
 				console.log(new_line);
-				video_m3u8 += new_line;
-				rows_number++;
 				}
 			});
-		});
+		}).done(function (x) 
+        {
+            //When you get the result from your ajax call. Write your code here.
+            video_m3u8 += new_line;
+	    rows_number++;
+        });
 		    }
 		  }
 		  if(video_config_media['streams'][i].format == 'adaptive_hls' && video_config_media['streams'][i].hardsub_lang == user_lang)
