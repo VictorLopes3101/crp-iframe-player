@@ -15,16 +15,15 @@ window.addEventListener("message", function(e) {
 		  if(video_config_media['streams'][i].format == 'trailer_hls' && video_config_media['streams'][i].hardsub_lang == user_lang)
 		  {
 		    if(rows_number <= 5){
-    		    var oReq = new XMLHttpRequest();
-    		    oReq.open("get", video_config_media['streams'][i].url.replace("clipTo/120000/", "clipTo/" + video_config_media['metadata']['duration'] + "/").replace("index.m3u8", "master.m3u8"), false);
-    		    oReq.onreadystatechange = function() {
-                    if (oReq.readyState == 4) {
-                        new_line = '\n' + oReq.responseText.replace("#EXTM3U", "").trim();
-                        video_m3u8 += new_line;
-                    }
-    		    }
-                oReq.send();
-                rows_number++;
+    		    	$.ajax({
+				url: video_config_media['streams'][i].url.replace("clipTo/120000/", "clipTo/" + video_config_media['metadata']['duration'] + "/").replace("index.m3u8", "master.m3u8"),
+				async: false;
+				success: function(result){
+				new_line = '\n' + oReq.responseText.replace("#EXTM3U", "").trim();
+				video_m3u8 += new_line;
+				rows_number++;
+				}
+			});
 		    }
 		  }
 		  if(video_config_media['streams'][i].format == 'adaptive_hls' && video_config_media['streams'][i].hardsub_lang == user_lang)
