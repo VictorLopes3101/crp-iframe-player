@@ -17,7 +17,7 @@ window.addEventListener("message", function(e) {
 		    if(rows_number <= 5){
     		    	$.ajax({
 				url: video_config_media['streams'][i].url.replace("clipTo/120000/", "clipTo/" + video_config_media['metadata']['duration'] + "/").replace("index.m3u8", "master.m3u8"),
-				async: false;
+				async: false,
 				success: function(result){
 				new_line = '\n' + oReq.responseText.replace("#EXTM3U", "").trim();
 				video_m3u8 += new_line;
