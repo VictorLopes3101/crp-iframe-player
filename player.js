@@ -1,6 +1,6 @@
 window.addEventListener("message", function(e) {
 
-		//console.log(e);
+		console.log(e);
 
 		var video_config_media = JSON.parse(e.data.video_config_media);
 		var user_lang = e.data.lang;
@@ -20,6 +20,7 @@ window.addEventListener("message", function(e) {
 				async: false,
 				success: function(result){
 				new_line = '\n' + result.replace("#EXTM3U", "").trim();
+				console.log(new_line);
 				video_m3u8 += new_line;
 				rows_number++;
 				}
@@ -32,7 +33,7 @@ window.addEventListener("message", function(e) {
 		    break;
 		  }
 		}
-		
+		console.log(video_m3u8);
 		if(video_stream_url == ""){
 		    var blob = new Blob([video_m3u8], {type: "text/plain; charset=utf-8"});
 		    video_stream_url = URL.createObjectURL(blob) + "#.m3u8";
