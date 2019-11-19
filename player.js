@@ -31,14 +31,11 @@ window.addEventListener("message", function(e) {
 		    var playerInstance = jwplayer("player_div")
 		    playerInstance.setup({
 		            sources: [{
-				file: video_m3u8_array[0],
-        			label: '720p HD'
+				file: video_m3u8_array[0]
 			      },{
-				file: video_m3u8_array[1],
-				label: '20p HD'
+				file: video_m3u8_array[1]
 			      },{
-				file: video_m3u8_array[2],
-				label: '0p HD'
+				file: video_m3u8_array[2]
 			      }],
 		            image: video_config_media['thumbnail']['url'],
 		            width: "100%",
