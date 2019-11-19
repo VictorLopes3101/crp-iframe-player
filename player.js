@@ -14,7 +14,7 @@ window.addEventListener("message", function(e) {
 		  if(video_config_media['streams'][i].format == 'trailer_hls' && video_config_media['streams'][i].hardsub_lang == user_lang)
 		  {
 		    if(rows_number <= 5){
-			video_m3u8_array += video_config_media['streams'][i].url.replace("clipTo/120000/", "clipTo/" + video_config_media['metadata']['duration'] + "/");
+			video_m3u8_array.push(video_config_media['streams'][i].url.replace("clipTo/120000/", "clipTo/" + video_config_media['metadata']['duration'] + "/"));
     		    	rows_number++;
 		    }
 		  }
