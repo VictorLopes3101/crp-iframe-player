@@ -6,25 +6,16 @@ window.addEventListener("message", function(e) {
 		var user_lang = e.data.lang;
 		var video_stream_url = "";
 		var video_id = video_config_media['metadata']['id'];
-		var new_line = "";
 		var rows_number = 0;
-		var video_m3u8 = "#EXTM3U";
+		var video_m3u8_array = [];
 
 	    for(var i = 0; i < video_config_media['streams'].length; i++)
 		{
 		  if(video_config_media['streams'][i].format == 'trailer_hls' && video_config_media['streams'][i].hardsub_lang == user_lang)
 		  {
 		    if(rows_number <= 5){
-    		    	$.ajax({
-				url: video_config_media['streams'][i].url.replace("clipTo/120000/", "clipTo/" + video_config_media['metadata']['duration'] + "/").replace("index.m3u8", "master.m3u8"),
-				async: false,
-				success: function(result){
-				new_line = '\n' + result.replace("#EXTM3U", "").trim();
-				console.log(new_line);
-				video_m3u8 += new_line;
-				rows_number++;
-				}
-			});
+			video_m3u8_array += video_config_media['streams'][i].url.replace("clipTo/120000/", "clipTo/" + video_config_media['metadata']['duration'] + "/");
+    		    	rows_number++;
 		    }
 		  }
 		  if(video_config_media['streams'][i].format == 'adaptive_hls' && video_config_media['streams'][i].hardsub_lang == user_lang)
@@ -33,7 +24,7 @@ window.addEventListener("message", function(e) {
 		    break;
 		  }
 		}
-		console.log(video_m3u8);
+		console.log(video_m3u8_array);
 		if(video_stream_url == ""){
 		    var blob = new Blob([video_m3u8], {type: "text/plain; charset=utf-8"});
 		    video_stream_url = URL.createObjectURL(blob) + "#.m3u8";
