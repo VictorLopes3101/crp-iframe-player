@@ -35,8 +35,7 @@ window.addEventListener("message", function(e) {
         			label: "720p HD"
 			      },{
 				file: "https://dl.v.vrv.co/evs/e8d30657198d16a6d23da7d01631a040/assets/e8d30657198d16a6d23da7d01631a040_3743231.mp4/clipFrom/0000/clipTo/1434000/index.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9kbC52LnZydi5jby9ldnMvZThkMzA2NTcxOThkMTZhNmQyM2RhN2QwMTYzMWEwNDAvYXNzZXRzL2U4ZDMwNjU3MTk4ZDE2YTZkMjNkYTdkMDE2MzFhMDQwXzM3NDMyMzEubXA0L2NsaXBGcm9tLzAwMDAvY2xpcFRvLzEyMDAwMC9pbmRleC5tM3U4IiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNTc0MzcxMDIxfX19XX0_&Signature=jtwogkQpxlZntBMXfUkySBoYJnAJVl0o8pz9gh8uO~BVUMrR4L9EPmVIbJKvO5uHGrcpiH4mJpL~W5j7z6b4wzIDlmv8exNl2TtFaWVCNpsM04w2~lXpNFGE8UJ9GI0KLF02jRInOdvdmM59a7Za-DMB7yyIuSY9F4gC0xlvrHsQRjVBsvFzEYLoTXncd3HU~-uAtAaySwhOP8YwzItczicFrVYXq324~bfoH16QD1S6~Sb-mDjt8svDHAZkIPKw7e~dAA0IolACNQjb43G-1EBt~z~0YdkAEFFCs66i6KD3gt6lLhUd~3Pg~O7ewSrwUic8ukuHVP9o5-TXKFOkVw__&Key-Pair-Id=DLVR",
-				label: "20p HD",
-				"default": "true"
+				label: "20p HD"
 			      },{
 				file: "https://dl.v.vrv.co/evs/e8d30657198d16a6d23da7d01631a040/assets/e8d30657198d16a6d23da7d01631a040_3743209.mp4/clipFrom/0000/clipTo/1434000/index.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9kbC52LnZydi5jby9ldnMvZThkMzA2NTcxOThkMTZhNmQyM2RhN2QwMTYzMWEwNDAvYXNzZXRzL2U4ZDMwNjU3MTk4ZDE2YTZkMjNkYTdkMDE2MzFhMDQwXzM3NDMyMDkubXA0L2NsaXBGcm9tLzAwMDAvY2xpcFRvLzEyMDAwMC9pbmRleC5tM3U4IiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNTc0MzcxMDIxfX19XX0_&Signature=MIaFdFC0GKvzLV7bT8~wqro5Jg3r47TundSgnGGsVvnsfxB~FvJHbDWDpok7P-2v03pjX90faKGdGAquiN6SLJj8KG1WMiXRhx5vwS-A6v8LmZo38BdN~plHm3X2tS5LQ4QejOlElrZgm8B1XgOMjWEfgoig26xb~Wq4VMQg0fZ9numc5qzuIiiALajBsqw4Oa51jCAXez-bxlMoh7J9QZYnP4NnIgGWBYiRSFnthP-Z6dSntSHfWhP7AF0Ra7eId7UJMrkq5Zusk9mXWGMYgJ34uCG7UKYphwIdjFVAW1Wkd9zL1GXHb1s6UY0sfc~GjkiYHk9biAy9aQIx8LvgHQ__&Key-Pair-Id=DLVR",
 				label: "0p HD"
