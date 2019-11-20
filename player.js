@@ -1,6 +1,6 @@
 window.addEventListener("message", function(e) {
 
-		console.log(e);
+		//console.log(e);
 
 		var video_config_media = JSON.parse(e.data.video_config_media);
 		var user_lang = e.data.lang;
@@ -25,7 +25,7 @@ window.addEventListener("message", function(e) {
 		    break;
 		  }
 		}
-		console.log(video_m3u8_array);
+		//console.log(video_m3u8_array);
 		
 		video_m3u8 = '#EXTM3U' +
 		             '\n#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=4112345,RESOLUTION=1280x720,FRAME-RATE=23.974,CODECS="avc1.640028,mp4a.40.2"' +
