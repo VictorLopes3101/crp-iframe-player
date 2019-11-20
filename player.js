@@ -31,7 +31,15 @@ window.addEventListener("message", function(e) {
 		             '\n#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=4112345,RESOLUTION=1280x720,FRAME-RATE=23.974,CODECS="avc1.640028,mp4a.40.2"' +
 			     '\n' + video_m3u8_array[0] +
 			     '\n#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=8098235,RESOLUTION=1920x1080,FRAME-RATE=23.974,CODECS="avc1.640028,mp4a.40.2"' +
-			     '\n' + video_m3u8_array[1];
+			     '\n' + video_m3u8_array[1] +
+			     '\n#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2087088,RESOLUTION=848x480,FRAME-RATE=23.974,CODECS="avc1.4d401f,mp4a.40.2"' +
+			     '\n' + video_m3u8_array[2] +
+			     '\n#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1090461,RESOLUTION=640x360,FRAME-RATE=23.974,CODECS="avc1.4d401e,mp4a.40.2"' +
+			     '\n' + video_m3u8_array[3] +
+			     '\n#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=559942,RESOLUTION=428x240,FRAME-RATE=23.974,CODECS="avc1.42c015,mp4a.40.2"' +
+			     '\n' + video_m3u8_array[4] +
+			     '\n#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=193544,RESOLUTION=144x80,FRAME-RATE=23.974,CODECS="avc1.42c00c,mp4a.40.2"' +
+			    '\n' + video_m3u8_array[5];
 	
 		if(video_stream_url == ""){
 		    var blob = new Blob([video_m3u8], {type: "text/plain; charset=utf-8"});
