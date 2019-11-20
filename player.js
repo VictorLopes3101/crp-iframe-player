@@ -8,6 +8,7 @@ window.addEventListener("message", function(e) {
 		var video_id = video_config_media['metadata']['id'];
 		var rows_number = 0;
 		var video_m3u8_array = [];
+		var video_m3u8= "";
 
 	    for(var i = 0; i < video_config_media['streams'].length; i++)
 		{
@@ -25,25 +26,25 @@ window.addEventListener("message", function(e) {
 		  }
 		}
 		console.log(video_m3u8_array);
+		
+		video_m3u8 = '#EXTM3U' +
+		             '\n#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=4112345,RESOLUTION=1280x720,FRAME-RATE=23.974,CODECS="avc1.640028,mp4a.40.2"' +
+			     '\n' + video_m3u8_array[0] +
+			     '\n#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=8098235,RESOLUTION=1920x1080,FRAME-RATE=23.974,CODECS="avc1.640028,mp4a.40.2"' +
+			     '\n' + video_m3u8_array[1];
 	
-		//Verifica se é stream paga.
 		if(video_stream_url == ""){
-		    var playerInstance = jwplayer("player_div")
-		    playerInstance.setup({
-		            file: video_stream_url,
-		            image: video_config_media['thumbnail']['url'],
-		            width: "100%",
-		            height: "100%"
-		    });
-		}else{
-		    var playerInstance = jwplayer("player_div")
-		    playerInstance.setup({
-		            file: video_stream_url,
-		            image: video_config_media['thumbnail']['url'],
-		            width: "100%",
-		            height: "100%"
-		    });
+		    var blob = new Blob([video_m3u8], {type: "text/plain; charset=utf-8"});
+		    video_stream_url = URL.createObjectURL(blob) + "#.m3u8";
 		}
+	
+		var playerInstance = jwplayer("player_div")
+		playerInstance.setup({
+		        file: video_stream_url,
+		        image: video_config_media['thumbnail']['url'],
+		        width: "100%",
+		        height: "100%"
+		});
 
 		jwplayer().on('ready', function(e) {
 			if(localStorage.getItem(video_id) != null){
