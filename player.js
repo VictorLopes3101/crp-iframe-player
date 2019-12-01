@@ -54,7 +54,7 @@ window.addEventListener("message", function(e) {
 		}
 		var playerInstance = jwplayer("player_div")
 		playerInstance.setup({
-			title: 'Episódio ' + video_config_media['metadata']['display_episode_number'],
+			title: episode_title,
 			description: video_config_media['metadata']['title'],
 		        file: video_stream_url,
 		        image: video_config_media['thumbnail']['url'],
