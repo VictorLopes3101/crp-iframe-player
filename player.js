@@ -50,6 +50,15 @@ window.addEventListener("message", function(e) {
 		playerInstance.setup({
 		        file: video_stream_url,
 		        image: video_config_media['thumbnail']['url'],
+			playlist: [{
+		                image: video_config_media['thumbnail']['url'],
+			        file: video_stream_url, 
+			        title: "Big Buck Bunny"
+		        },{
+		                image: video_config_media['metadata']['up_next']['thumbnails'][4],
+			        file: "rtmp://draco.streamingwizard.com:1935/wizard/_definst_/demo/streaming_320_v2.mp4",
+				title: "Streaming Wizard Promo"
+		        }],
 		        width: "100%",
 		        height: "100%"
 		});
