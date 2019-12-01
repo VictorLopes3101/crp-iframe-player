@@ -9,6 +9,7 @@ window.addEventListener("message", function(e) {
 		var rows_number = 0;
 		var video_m3u8_array = [];
 		var video_m3u8= "";
+		var episode_title = "";
 
 	    for(var i = 0; i < video_config_media['streams'].length; i++)
 		{
@@ -45,10 +46,15 @@ window.addEventListener("message", function(e) {
 		    var blob = new Blob([video_m3u8], {type: "text/plain; charset=utf-8"});
 		    video_stream_url = URL.createObjectURL(blob) + "#.m3u8";
 		}
-	
+		
+		if(video_config_media['up_next'] == undefined){
+		   episode_title = 'Episódio ' + video_config_media['metadata']['display_episode_number'];
+		}else{
+		   episode_title = video_config_media['up_next']['series_title'] + ' - ' + video_config_media['up_next']['display_episode_number'];
+		}
 		var playerInstance = jwplayer("player_div")
 		playerInstance.setup({
-			title: video_config_media['metadata']['display_episode_number'],
+			title: 'Episódio ' + video_config_media['metadata']['display_episode_number'],
 			description: video_config_media['metadata']['title'],
 		        file: video_stream_url,
 		        image: video_config_media['thumbnail']['url'],
