@@ -50,16 +50,6 @@ window.addEventListener("message", function(e) {
 		playerInstance.setup({
 		        file: video_stream_url,
 		        image: video_config_media['thumbnail']['url'],
-			playlist: [{
-		                image: video_config_media['thumbnail']['url'],
-			        file: video_stream_url, 
-			        title: video_config_media['metadata']['title'],
-				description: video_config_media['metadata']['display_episode_number']
-		        },{
-		                image: video_config_media['metadata']['up_next']['thumbnails'][4],
-			        file: video_stream_url,
-				title: "Streaming Wizard Promo"
-		        }],
 		        width: "100%",
 		        height: "100%"
 		});
