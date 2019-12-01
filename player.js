@@ -47,10 +47,10 @@ window.addEventListener("message", function(e) {
 		    video_stream_url = URL.createObjectURL(blob) + "#.m3u8";
 		}
 		
-		if(video_config_media['up_next'] == undefined){
+		if(video_config_media['metadata']['up_next'] == undefined){
 		   episode_title = 'Episódio ' + video_config_media['metadata']['display_episode_number'];
 		}else{
-		   episode_title = video_config_media['up_next']['series_title'] + ' - ' + video_config_media['up_next']['display_episode_number'];
+		   episode_title = video_config_media['metadata']['up_next']['series_title'] + ' - ' + video_config_media['metadata']['up_next']['display_episode_number'];
 		}
 		var playerInstance = jwplayer("player_div")
 		playerInstance.setup({
