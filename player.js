@@ -48,6 +48,8 @@ window.addEventListener("message", function(e) {
 	
 		var playerInstance = jwplayer("player_div")
 		playerInstance.setup({
+			title: video_config_media['metadata']['display_episode_number'],
+			description: video_config_media['metadata']['title'],
 		        file: video_stream_url,
 		        image: video_config_media['thumbnail']['url'],
 		        width: "100%",
