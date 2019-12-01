@@ -56,7 +56,7 @@ window.addEventListener("message", function(e) {
 			        title: "Big Buck Bunny"
 		        },{
 		                image: video_config_media['metadata']['up_next']['thumbnails'][4],
-			        file: "rtmp://draco.streamingwizard.com:1935/wizard/_definst_/demo/streaming_320_v2.mp4",
+			        file: video_stream_url,
 				title: "Streaming Wizard Promo"
 		        }],
 		        width: "100%",
