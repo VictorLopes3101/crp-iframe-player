@@ -50,7 +50,8 @@ window.addEventListener("message", function(e) {
 		if(video_config_media['metadata']['up_next'] == undefined){
 		   episode_title = 'Episódio ' + video_config_media['metadata']['display_episode_number'];
 		}else{
-		   episode_title = video_config_media['metadata']['up_next']['series_title'] + ' - ' + video_config_media['metadata']['up_next']['display_episode_number'].substring(0, video_config_media['metadata']['up_next']['display_episode_number'].length() - 1);
+		   var prox_ep_number = video_config_media['metadata']['up_next']['display_episode_number'];
+		   episode_title = video_config_media['metadata']['up_next']['series_title'] + ' - ' + prox_ep_number.substring(0, prox_ep_number.length - 1) + video_config_media['metadata']['display_episode_number'];
 		}
 		var playerInstance = jwplayer("player_div")
 		playerInstance.setup({
