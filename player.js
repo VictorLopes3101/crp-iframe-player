@@ -50,7 +50,7 @@ window.addEventListener("message", function(e) {
 		    video_stream_url = URL.createObjectURL(blob) + "#.m3u8";
 		}
 		
-		series_title = series_url.split('/')[4].replace("-"," ");
+		series_title = series_url.split('/')[4].replace("-"," ").replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
 		console.log(series_title);
 		if(video_config_media['metadata']['up_next'] == undefined){
 		   episode_title = 'Episódio ' + video_config_media['metadata']['display_episode_number'];
