@@ -50,7 +50,7 @@ window.addEventListener("message", function(e) {
 		    video_stream_url = URL.createObjectURL(blob) + "#.m3u8";
 		}
 		
-		series_title = series_url.split('/')[4];
+		series_title = series_url.split('/')[4].replace("-"," ");
 		console.log(series_title);
 		if(video_config_media['metadata']['up_next'] == undefined){
 		   episode_title = 'Episódio ' + video_config_media['metadata']['display_episode_number'];
