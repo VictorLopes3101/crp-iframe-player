@@ -51,9 +51,8 @@ window.addEventListener("message", function(e) {
 		}
 		
 		series_title = series_url.split('/')[4].replace("-"," ").replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
-		console.log(series_title);
 		if(video_config_media['metadata']['up_next'] == undefined){
-		   episode_title = 'Episódio ' + video_config_media['metadata']['display_episode_number'];
+		   episode_title = series_title + ' - ' + 'Episódio ' + video_config_media['metadata']['display_episode_number'];
 		}else{
 		   var prox_ep_number = video_config_media['metadata']['up_next']['display_episode_number'];
 		   episode_title = video_config_media['metadata']['up_next']['series_title'] + ' - ' + prox_ep_number.replace(/\d+/g, '') + video_config_media['metadata']['display_episode_number'];
