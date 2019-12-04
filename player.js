@@ -11,6 +11,9 @@ window.addEventListener("message", function(e) {
 		var video_m3u8_array = [];
 		var video_m3u8= "";
 		var episode_title = "";
+		var series_title = e.currentTarget.document.referrer;
+		var series_url = e.currentTarget.document.referrer.url.substr(0,document.URL.lastIndexOf('/'));
+		console.log(series_url);
 
 	    for(var i = 0; i < video_config_media['streams'].length; i++)
 		{
