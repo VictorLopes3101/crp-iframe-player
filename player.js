@@ -11,9 +11,8 @@ window.addEventListener("message", function(e) {
 		var video_m3u8_array = [];
 		var video_m3u8= "";
 		var episode_title = "";
-		var series_title = e.currentTarget.document.referrer;
+		var series_title = "";
 		var series_url = e.currentTarget.document.referrer.substr(0,document.URL.lastIndexOf('/'));
-		console.log(series_url);
 
 	    for(var i = 0; i < video_config_media['streams'].length; i++)
 		{
@@ -51,6 +50,8 @@ window.addEventListener("message", function(e) {
 		    video_stream_url = URL.createObjectURL(blob) + "#.m3u8";
 		}
 		
+		series_title = series_url.split('/')[4];
+		console.log(series_title);
 		if(video_config_media['metadata']['up_next'] == undefined){
 		   episode_title = 'Episódio ' + video_config_media['metadata']['display_episode_number'];
 		}else{
