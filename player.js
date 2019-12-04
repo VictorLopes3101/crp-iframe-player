@@ -1,6 +1,7 @@
 window.addEventListener("message", function(e) {
 
 		//console.log(e);
+		console.log(e.currentTarget.referrer);
 
 		var video_config_media = JSON.parse(e.data.video_config_media);
 		var user_lang = e.data.lang;
