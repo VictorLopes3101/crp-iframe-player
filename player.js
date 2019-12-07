@@ -63,77 +63,78 @@ window.addEventListener("message", function(e) {
 		    dataType: "rss",
 		    success: function (response) {
 			series_title = $(data).find("image").find("title").text();
-		    }
-		});
-		console.log(series_title);
-		
-		//Pega o numero e titulo do episodio
-		switch (user_lang[0]) {
-			case ("ptBR"):
-				episode_translate = "Episódio ";
-				break;
-			case ("enUS"):
-				episode_translate = "Episode ";
-				break;
-			case ("enGB"):
-				episode_translate = "Episode ";
-				break;
-			case ("esLA"):
-				episode_translate = "Episodio ";
-				break;
-			case ("esES"):
-				episode_translate = "Episodio ";
-				break;
-			case ("ptPT"):
-				episode_translate = "Episódio ";
-				break;
-			case ("frFR"):
-				episode_translate = "Épisode ";
-				break;
-			case ("deDE"):
-				episode_translate = "Folge ";
-				break;
-			case ("arME"):
-				episode_translate = "الحلقة ";
-				break;
-			case ("itIT"):
-				episode_translate = "Episodio ";
-				break;
-			case ("ruRU"):
-				episode_translate = "Серия ";
-				break;
-			default:
-				episode_translate = "Episode ";
-		}
-	
-		if(video_config_media['metadata']['up_next'] == undefined){
-		   episode_title = series_title + ' - ' + episode_translate + video_config_media['metadata']['display_episode_number'];
-		}else{
-		   var prox_ep_number = video_config_media['metadata']['up_next']['display_episode_number'];
-		   episode_title = video_config_media['metadata']['up_next']['series_title'] + ' - ' + prox_ep_number.replace(/\d+/g, '') + video_config_media['metadata']['display_episode_number'];
-		}
-	
-		//Inicia o player
-		var playerInstance = jwplayer("player_div")
-		playerInstance.setup({
-			title: episode_title,
-			description: video_config_media['metadata']['title'],
-		        file: video_stream_url,
-		        image: video_config_media['thumbnail']['url'],
-		        width: "100%",
-		        height: "100%"
-		});
-		
-		//Funções para o player
-		jwplayer().on('ready', function(e) {
-			if(localStorage.getItem(video_id) != null){
-				document.getElementsByTagName("video")[0].currentTime = localStorage.getItem(video_id);
+			    
+			console.log(series_title);
+
+			//Pega o numero e titulo do episodio
+			switch (user_lang[0]) {
+				case ("ptBR"):
+					episode_translate = "Episódio ";
+					break;
+				case ("enUS"):
+					episode_translate = "Episode ";
+					break;
+				case ("enGB"):
+					episode_translate = "Episode ";
+					break;
+				case ("esLA"):
+					episode_translate = "Episodio ";
+					break;
+				case ("esES"):
+					episode_translate = "Episodio ";
+					break;
+				case ("ptPT"):
+					episode_translate = "Episódio ";
+					break;
+				case ("frFR"):
+					episode_translate = "Épisode ";
+					break;
+				case ("deDE"):
+					episode_translate = "Folge ";
+					break;
+				case ("arME"):
+					episode_translate = "الحلقة ";
+					break;
+				case ("itIT"):
+					episode_translate = "Episodio ";
+					break;
+				case ("ruRU"):
+					episode_translate = "Серия ";
+					break;
+				default:
+					episode_translate = "Episode ";
 			}
-			document.body.querySelector(".loading_container").style.display = "none";
-		});
-		const interval = setInterval(function() {
-			if(jwplayer().getState() == "playing"){
-   				localStorage.setItem(video_id, jwplayer().getPosition());
-   			}
- 		}, 5000);
+
+			if(video_config_media['metadata']['up_next'] == undefined){
+			   episode_title = series_title + ' - ' + episode_translate + video_config_media['metadata']['display_episode_number'];
+			}else{
+			   var prox_ep_number = video_config_media['metadata']['up_next']['display_episode_number'];
+			   episode_title = video_config_media['metadata']['up_next']['series_title'] + ' - ' + prox_ep_number.replace(/\d+/g, '') + video_config_media['metadata']['display_episode_number'];
+			}
+
+			//Inicia o player
+			var playerInstance = jwplayer("player_div")
+			playerInstance.setup({
+				title: episode_title,
+				description: video_config_media['metadata']['title'],
+				file: video_stream_url,
+				image: video_config_media['thumbnail']['url'],
+				width: "100%",
+				height: "100%"
+			});
+
+			//Funções para o player
+			jwplayer().on('ready', function(e) {
+				if(localStorage.getItem(video_id) != null){
+					document.getElementsByTagName("video")[0].currentTime = localStorage.getItem(video_id);
+				}
+				document.body.querySelector(".loading_container").style.display = "none";
+			});
+			const interval = setInterval(function() {
+				if(jwplayer().getState() == "playing"){
+					localStorage.setItem(video_id, jwplayer().getPosition());
+				}
+			}, 5000);
+		}
+	});
 });
