@@ -1,3 +1,4 @@
+var source = "";
 window.addEventListener("message", function(e) {
 
 		console.log(e);
@@ -13,6 +14,7 @@ window.addEventListener("message", function(e) {
 		var episode_title = "";
 		var series_title = "";
 		var series_url = e.currentTarget.document.referrer;
+		source = e;
 
 	    for(var i = 0; i < video_config_media['streams'].length; i++)
 		{
