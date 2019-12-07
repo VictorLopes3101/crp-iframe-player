@@ -56,7 +56,7 @@ window.addEventListener("message", function(e) {
 		
 		//Pega varias informações pela pagina rss.
 		$.ajax({
-		    async: false,
+		    async: true,
 		    type: "GET",
 		    url: "https://cors-anywhere.herokuapp.com/" + series_rss,
 		    contentType: "text/xml; charset=utf-8",
