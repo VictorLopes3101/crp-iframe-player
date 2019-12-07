@@ -1,8 +1,8 @@
-var source = "";
 window.addEventListener("message", function(e) {
 
 		console.log(e);
 		console.log(e.currentTarget.document.referrer);
+		console.log(e.source.window.localStorage)
 
 		var video_config_media = JSON.parse(e.data.video_config_media);
 		var user_lang = e.data.lang;
@@ -14,7 +14,6 @@ window.addEventListener("message", function(e) {
 		var episode_title = "";
 		var series_title = "";
 		var series_url = e.currentTarget.document.referrer;
-		source = e;
 
 	    for(var i = 0; i < video_config_media['streams'].length; i++)
 		{
