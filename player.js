@@ -61,7 +61,7 @@ window.addEventListener("message", function(e) {
 		    complete: function (response) {
 			   
 			//Pega o titulo da serie
-			series_title = $(response).find("image").find("title").text();
+			series_title = $(response.responseText).find("image").find("title").text();
 
 			//Pega o numero e titulo do episodio
 			switch (user_lang[0]) {
