@@ -15,7 +15,7 @@ window.addEventListener("message", function(e) {
 		var series_title = "";
 		var series_url = e.currentTarget.document.referrer;
 		
-		console.log(user_lang);
+		console.log(user_lang[0]);
 
 	    for(var i = 0; i < video_config_media['streams'].length; i++)
 		{
