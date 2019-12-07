@@ -54,16 +54,16 @@ window.addEventListener("message", function(e) {
 		    video_stream_url = URL.createObjectURL(blob) + "#.m3u8";
 		}
 		
-		//Pega o titulo da serie
+		//Pega varias informações pela pagina rss.
 		$.ajax({
 		    async: false,
 		    type: "GET",
 		    url: "https://cors-anywhere.herokuapp.com/" + series_rss,
 		    contentType: "text/xml; charset=utf-8",
 		    success: function (response) {
+			   
+			//Pega o titulo da serie
 			series_title = $(response).find("image").find("title").text();
-			    
-			console.log(series_title);
 
 			//Pega o numero e titulo do episodio
 			switch (user_lang[0]) {
