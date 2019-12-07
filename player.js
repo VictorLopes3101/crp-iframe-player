@@ -11,6 +11,7 @@ window.addEventListener("message", function(e) {
 		var video_m3u8_array = [];
 		var video_m3u8= "";
 		var episode_title = "";
+		var episode_translate = "";
 		var series_title = "";
 		var series_url = e.currentTarget.document.referrer;
 
@@ -50,14 +51,57 @@ window.addEventListener("message", function(e) {
 		    video_stream_url = URL.createObjectURL(blob) + "#.m3u8";
 		}
 		
+		//Pega o titulo da serie
 		series_title = series_url.split('/')[4].replace(/\-/g," ").replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
 		console.log(series_title);
+		
+		//Pega o numero e titulo do episodio
+		switch (user_lang) {
+			case ("ptBR"):
+				episode_translate = "Episódio ";
+				break;
+			case ("enUS"):
+				episode_translate = "Episode ";
+				break;
+			case ("enGB"):
+				episode_translate = "Episode ";
+				break;
+			case ("esLA"):
+				episode_translate = "Episodio ";
+				break;
+			case ("esES"):
+				episode_translate = "Episodio ";
+				break;
+			case ("ptPT"):
+				episode_translate = "Episódio ";
+				break;
+			case ("frFR"):
+				episode_translate = "Épisode ";
+				break;
+			case ("deDE"):
+				episode_translate = "Folge ";
+				break;
+			case ("arME"):
+				episode_translate = "الحلقة ";
+				break;
+			case ("itIT"):
+				episode_translate = "Episodio ";
+				break;
+			case ("ruRU"):
+				episode_translate = "Серия ";
+				break;
+			default:
+				episode_translate = "Episode ";
+		}
+	
 		if(video_config_media['metadata']['up_next'] == undefined){
-		   episode_title = series_title + ' - ' + 'Episódio ' + video_config_media['metadata']['display_episode_number'];
+		   episode_title = series_title + ' - ' + episode_translate + video_config_media['metadata']['display_episode_number'];
 		}else{
 		   var prox_ep_number = video_config_media['metadata']['up_next']['display_episode_number'];
 		   episode_title = video_config_media['metadata']['up_next']['series_title'] + ' - ' + prox_ep_number.replace(/\d+/g, '') + video_config_media['metadata']['display_episode_number'];
 		}
+	
+		//Inicia o player
 		var playerInstance = jwplayer("player_div")
 		playerInstance.setup({
 			title: episode_title,
@@ -67,7 +111,8 @@ window.addEventListener("message", function(e) {
 		        width: "100%",
 		        height: "100%"
 		});
-
+		
+		//Funções para o player
 		jwplayer().on('ready', function(e) {
 			if(localStorage.getItem(video_id) != null){
 				document.getElementsByTagName("video")[0].currentTime = localStorage.getItem(video_id);
