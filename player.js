@@ -15,8 +15,6 @@ window.addEventListener("message", function(e) {
 		var series_title = "";
 		var series_url = e.currentTarget.document.referrer;
 		var series_rss = "https://www.crunchyroll.com/" + series_url.split("/")[4] + ".rss";
-		
-		console.log(series_rss);
 
 	    for(var i = 0; i < video_config_media['streams'].length; i++)
 		{
