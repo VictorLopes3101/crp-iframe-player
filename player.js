@@ -55,8 +55,10 @@ window.addEventListener("message", function(e) {
 		}
 		
 		//Pega o titulo da serie
-		series_title = series_url.split('/')[4].replace(/\-/g," ").replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
-		//console.log(series_title);
+		$.get(series_rss, function (data) {
+		    series_title = $(data).find("image").find("title").text();
+		});
+		console.log(series_title);
 		
 		//Pega o numero e titulo do episodio
 		switch (user_lang[0]) {
