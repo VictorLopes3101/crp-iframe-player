@@ -12,7 +12,7 @@ window.addEventListener("message", function(e) {
 		var video_m3u8= "";
 		var episode_title = "";
 		var series_title = "";
-		var series_url = e.currentTarget.document.referrer.substr(0,document.URL.lastIndexOf('/'));
+		var series_url = e.currentTarget.document.referrer;
 
 	    for(var i = 0; i < video_config_media['streams'].length; i++)
 		{
