@@ -13,7 +13,7 @@ window.addEventListener("message", function(e) {
 		var episode_title = "";
 		var episode_translate = "";
 		var series_title = "";
-		var series_url = e.currentTarget.document.referrer.substr(0,document.URL.lastIndexOf('/'));
+		var series_url = e.currentTarget.document.referrer;
 		
 		console.log(series_url);
 
