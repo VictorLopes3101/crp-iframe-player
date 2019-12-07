@@ -13,7 +13,9 @@ window.addEventListener("message", function(e) {
 		var episode_title = "";
 		var episode_translate = "";
 		var series_title = "";
-		var series_url = e.currentTarget.document.referrer;
+		var series_url = e.currentTarget.document.referrer.substr(0,document.URL.lastIndexOf('/'));
+		
+		console.log(series_url);
 
 	    for(var i = 0; i < video_config_media['streams'].length; i++)
 		{
