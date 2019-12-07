@@ -55,7 +55,7 @@ window.addEventListener("message", function(e) {
 		}
 		
 		//Pega o titulo da serie
-		$.get(series_rss, function (data) {
+		$.get("https://cors-anywhere.herokuapp.com/" + series_rss, function (data) {
 		    series_title = $(data).find("image").find("title").text();
 		});
 		console.log(series_title);
