@@ -14,8 +14,6 @@ window.addEventListener("message", function(e) {
 		var episode_translate = "";
 		var series_title = "";
 		var series_url = e.currentTarget.document.referrer;
-		
-		console.log(user_lang[0]);
 
 	    for(var i = 0; i < video_config_media['streams'].length; i++)
 		{
@@ -58,7 +56,7 @@ window.addEventListener("message", function(e) {
 		console.log(series_title);
 		
 		//Pega o numero e titulo do episodio
-		switch (user_lang) {
+		switch (user_lang[0]) {
 			case ("ptBR"):
 				episode_translate = "Episódio ";
 				break;
