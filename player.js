@@ -60,9 +60,8 @@ window.addEventListener("message", function(e) {
 		    type: "GET",
 		    url: "https://cors-anywhere.herokuapp.com/" + series_rss,
 		    contentType: "text/xml; charset=utf-8",
-		    dataType: "rss",
 		    success: function (response) {
-			series_title = $(data).find("image").find("title").text();
+			series_title = $(response).find("image").find("title").text();
 			    
 			console.log(series_title);
 
