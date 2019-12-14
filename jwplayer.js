@@ -5758,9 +5758,9 @@ window.jwplayer = function(t) {
                         d = "free" === f;
                     if (d) {
                         var p = ["addButton", "addCues", "detachMedia", "load", "next", "pause", "play", "playlistItem", "playlistNext", "playlistPrev", "playToggle", "resize", "seek", "setCaptions", "setConfig", "setControls", "setCues", "setFullscreen", "setMute", "setPlaybackRate", "setPlaylistItem", "setVolume", "stop"];
-                        if (p.indexOf(r) > -1) return ct(r), e;
+                        if (p.indexOf(r) > -1) n[r].apply(n, u);
                         var h = ["createInstream", "setCurrentAudioTrack", "setCurrentCaptions", "setCurrentQuality"];
-                        if (h.indexOf(r) > -1) return ct(r), null
+                        if (h.indexOf(r) > -1) n[r].apply(n, u);
                     }
                     if (l || c.push([r, a]), s) return ft(n, c), n[r].apply(e, u);
                     st(r, u);
