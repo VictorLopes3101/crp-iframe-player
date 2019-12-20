@@ -14,7 +14,11 @@ window.addEventListener("message", function(e) {
 		var episode_translate = "";
 		var series_title = "";
 		var series_url = e.currentTarget.document.referrer;
-		var series_rss = "https://www.crunchyroll.com/" + series_url.split("/")[4] + ".rss";
+		if (user_lang == "enUS") {
+			var series_rss = "https://www.crunchyroll.com/" + series_url.split("/")[3] + ".rss";
+		}else{
+			var series_rss = "https://www.crunchyroll.com/" + series_url.split("/")[4] + ".rss";
+		}
 
 	    for(var i = 0; i < video_config_media['streams'].length; i++)
 		{
