@@ -136,6 +136,7 @@ window.addEventListener("message", function(e) {
 			jwplayer().on('error', function (e) {
 				if(e.code == 232011){
 					jwplayer().load({file: "http://techslides.com/demos/sample-videos/small.mp4"});
+					jwplayer().setControls(false);
 					jwplayer().play();
 				}
 			});
