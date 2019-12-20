@@ -135,7 +135,7 @@ window.addEventListener("message", function(e) {
 			});
 			jwplayer().on('error', function (e) {
 				if(e.code == 232011){
-					jwplayer().load({file: "http://techslides.com/demos/sample-videos/small.mp4"});
+					jwplayer().load({file: "https://i.giphy.com/media/Rkis28kMJd1aE/giphy.webp"});
 					jwplayer().setControls(false);
 					jwplayer().play();
 				}
