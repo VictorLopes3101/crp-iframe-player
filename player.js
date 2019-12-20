@@ -20,6 +20,7 @@ window.addEventListener("message", function(e) {
 		}else{
 			var series_rss = "https://www.crunchyroll.com/" + series_url.split("/")[4] + ".rss";
 		}
+	console.log(video_config_media);
 
 	    for(var i = 0; i < video_config_media['streams'].length; i++)
 		{
