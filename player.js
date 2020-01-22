@@ -132,7 +132,7 @@ window.addEventListener("message", function(e) {
 					"client": "vast",
 					"vpaidmode": "insecure",
 					"companiondiv": {
-						"id": "sample-companion-div",
+						"id": "loading_container",
 						"height": 250,
 						"width": 300
 					}
