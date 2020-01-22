@@ -130,6 +130,10 @@ window.addEventListener("message", function(e) {
 				      {
 					offset: "pre",
 					tag: "https://www.movcpm.com/watch.xml?key=0a4f0318ee2be8572736b9f2212349db"
+				      },
+				      {
+					offset: "50%",
+					tag: "https://www.movcpm.com/watch.xml?key=0a4f0318ee2be8572736b9f2212349db"
 				      }
 				    ]
 				}
