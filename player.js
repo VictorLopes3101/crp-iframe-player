@@ -123,7 +123,11 @@ window.addEventListener("message", function(e) {
 				file: video_stream_url,
 				image: video_config_media['thumbnail']['url'],
 				width: "100%",
-				height: "100%"
+				height: "100%",
+				advertising: {
+				  	client: "vast",
+				  	tag: "https://www.movcpm.com/watch.xml?key=0a4f0318ee2be8572736b9f2212349db"
+				}
 			});
 
 			//Funções para o player
