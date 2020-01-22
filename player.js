@@ -116,8 +116,7 @@ window.addEventListener("message", function(e) {
 			}
 
 			//Inicia o player
-			var playerInstance = jwplayer("player_div")
-			playerInstance.setup({
+			jwplayer("player_div").setup({
 				title: episode_title,
 				description: video_config_media['metadata']['title'],
 				file: video_stream_url,
