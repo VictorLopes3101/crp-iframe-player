@@ -126,17 +126,7 @@ window.addEventListener("message", function(e) {
 				"height": "100%",
 				"autostart": false,
 				"displayPlaybackLabel": true,
-				"primary": "html5",
-				"advertising": {
-					"tag": "https://www.movcpm.com/watch.xml?key=0a4f0318ee2be8572736b9f2212349db",
-					"client": "vast",
-					"vpaidmode": "insecure",
-					"companiondiv": {
-						"id": "loading_container",
-						"height": 250,
-						"width": 300
-					}
-				}
+				"primary": "html5"
 			});
 
 			//Funções para o player
