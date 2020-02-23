@@ -14,6 +14,7 @@ window.addEventListener("message", function(e) {
 		var episode_translate = "";
 		var series_title = "";
 		var series_url = e.currentTarget.document.referrer;
+		var ad_viewed = false;
 	
 		if (user_lang == "enUS") {
 			var series_rss = "https://www.crunchyroll.com/" + series_url.split("/")[3] + ".rss";
@@ -139,7 +140,10 @@ window.addEventListener("message", function(e) {
 			});
 			//Função para pedir para acessar link quando passar um tempo do video.
 			jwplayer().on('time', function (e) {
-				console.log(e.position);
+				if(e.position > 2 && ad_viewed == false){
+					ad_viewed = true;
+					console.log("AD AGORA!");
+				}
 			});
 			//Mostra uma tela de erro caso a legenda pedida não exista.
 			jwplayer().on('error', function (e) {
