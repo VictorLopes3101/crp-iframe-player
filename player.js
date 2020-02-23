@@ -131,10 +131,14 @@ window.addEventListener("message", function(e) {
 
 			//Funções para o player
 			jwplayer().on('ready', function(e) {
+				//Seta o tempo do video pro salvo no localStorage		
 				if(localStorage.getItem(video_id) != null){
 					document.getElementsByTagName("video")[0].currentTime = localStorage.getItem(video_id);
 				}
 				document.body.querySelector(".loading_container").style.display = "none";
+				
+				//Pede pra que desbloqueie o video
+				console.log("AD_LINK_NOW");
 			});
 			jwplayer().on('error', function (e) {
 				if(e.code == 232011){
