@@ -139,9 +139,7 @@ window.addEventListener("message", function(e) {
 			});
 			//Função para pedir para acessar link quando passar um tempo do video.
 			jwplayer().on('time', function (e) {
-				if (e.position == 5) {
-					console.log("SHOW AD NOW");
-				}
+				console.log(e.position);
 			});
 			//Mostra uma tela de erro caso a legenda pedida não exista.
 			jwplayer().on('error', function (e) {
