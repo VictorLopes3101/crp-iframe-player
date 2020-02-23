@@ -1,154 +1,162 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700,800&subset=latin-ext');
-body{font-family:'Montserrat',sans-serif; background-color:#f7f7f7}
-a{text-decoration:none;}
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,700,800&subset=latin-ext");
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #f7f7f7;
+}
+a {
+  text-decoration: none;
+}
 
-@color-purple: #673AB7;
-@color-red:    #FF1744;
+@color-purple: #673ab7;
+@color-red: #ff1744;
 @button-width: 80px;
 
 // button
-.button{
-  position:relative;
-  min-width:@button-width;
-  text-align:center;
-  display:inline-block;
-  padding:12px 25px;
-  font-size:14px;
-  font-weight:700;
-  z-index:10;
-  transition:all 500ms;
-  border:2px solid transparent;
-  margin:10px 15px;
-  border-radius:5px;
-  &::after{
-    content:'';
-    position:absolute;
-    z-index:-1;
-    transition:all 500ms;
-  border-radius:5px;
+.button {
+  position: relative;
+  min-width: @button-width;
+  text-align: center;
+  display: inline-block;
+  padding: 12px 25px;
+  font-size: 14px;
+  font-weight: 700;
+  z-index: 10;
+  transition: all 500ms;
+  border: 2px solid transparent;
+  margin: 10px 15px;
+  border-radius: 5px;
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    transition: all 500ms;
+    border-radius: 5px;
   }
-  
-  &:hover{
-    box-shadow:none!important;
+
+  &:hover {
+    box-shadow: none !important;
   }
-  
-  // purple 
-  &.button-purple{
-    color:#fff;
-    background-color:@color-purple;
-    box-shadow:0 3px 20px fade(@color-purple,30);
-    &::after{
-      background-color:#fff;
+
+  // purple
+  &.button-purple {
+    color: #fff;
+    background-color: @color-purple;
+    box-shadow: 0 3px 20px fade(@color-purple, 30);
+    &::after {
+      background-color: #fff;
     }
-    &:hover{
-      color:@color-purple;
-      border-color:@color-purple;
-    }
-  }
-  
-  // red 
-  &.button-red{
-    color:#fff;
-    background-color:@color-red;
-    box-shadow:0 5px 20px fade(@color-red,30);
-    &::after{
-      background-color:#fff;
-    }
-    &:hover{
-      color:@color-red;
-      border-color:@color-red;
+    &:hover {
+      color: @color-purple;
+      border-color: @color-purple;
     }
   }
-  
-  
-  &.button{
+
+  // red
+  &.button-red {
+    color: #fff;
+    background-color: @color-red;
+    box-shadow: 0 5px 20px fade(@color-red, 30);
+    &::after {
+      background-color: #fff;
+    }
+    &:hover {
+      color: @color-red;
+      border-color: @color-red;
+    }
+  }
+
+  &.button {
     // left
-    &-left{
-      &::after{
-        top:0; 
-        right:0;
-        width:0;       
-        height:100%;
+    &-left {
+      &::after {
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 100%;
       }
-      &:hover{
-        &::after{
-          width:100%;
-          left:0;
-          right:auto;
+      &:hover {
+        &::after {
+          width: 100%;
+          left: 0;
+          right: auto;
         }
       }
     }
-    
+
     // right
-    &-right{
-      &::after{
-        top:0; 
-        left:0;
-        width:0;
-        height:100%;
+    &-right {
+      &::after {
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
       }
-      &:hover{
-        &::after{
-          width:100%;
-          right:0;
-          left:auto;
+      &:hover {
+        &::after {
+          width: 100%;
+          right: 0;
+          left: auto;
         }
       }
     }
-    
+
     // top
-    &-top{
-      &::after{
-        top:0;
-        left:0;
-        width:100%;
-        height:0;
+    &-top {
+      &::after {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
       }
-      &:hover{
-        &::after{
-          height:100%;
-          top:auto;
-          bottom:0;
+      &:hover {
+        &::after {
+          height: 100%;
+          top: auto;
+          bottom: 0;
         }
       }
     }
-    
+
     // bottom
-    &-bottom{
-      &::after{
-        bottom:0;
-        left:0;
-        width:100%;
-        height:0;
+    &-bottom {
+      &::after {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
       }
-      &:hover{
-        &::after{
-          height:100%;
-          bottom:auto;
-          top:0;
+      &:hover {
+        &::after {
+          height: 100%;
+          bottom: auto;
+          top: 0;
         }
       }
     }
   }
-  
 }
 
 // other
-.wrapper{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  height:100vh;
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
-.content{
-  text-align:center;
-  .text{
-    margin-bottom:60px;
-    h2{font-weight:800; color:#777; letter-spacing:3px; margin-bottom:10px;}
-    a{
-      font-size:14px;
-      font-weight:500;
-      color:fade(#000,25);
+.content {
+  text-align: center;
+  .text {
+    margin-bottom: 60px;
+    h2 {
+      font-weight: 800;
+      color: #777;
+      letter-spacing: 3px;
+      margin-bottom: 10px;
+    }
+    a {
+      font-size: 14px;
+      font-weight: 500;
+      color: fade(#000, 25);
     }
   }
 }
