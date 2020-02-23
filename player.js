@@ -140,7 +140,7 @@ window.addEventListener("message", function(e) {
 			});
 			//Função para pedir para acessar link quando passar um tempo do video.
 			jwplayer().on('time', function (e) {
-				if(e.position > 2 && ad_viewed == false){
+				if(e.position > 4 && ad_viewed == false){
 					ad_viewed = true;
 					console.log("AD AGORA!");
 				}
