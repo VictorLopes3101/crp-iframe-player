@@ -174,11 +174,12 @@ window.addEventListener("message", function(e) {
 											clearInterval(check_ad_interval);
 											$(ad_bkgrnd).fadeOut(1000);
 											$(ad_container).fadeOut(1000);
-											jwplayer().play();
+											if(jwplayer().getState() == "paused"){
+												jwplayer().play();
+											}
 											jwplayer().setControls(true);
 										}else{
 											ad_variable_msg.innerText = "Aguardando que veja...";
-											console.log("Não viu ainda.");
 										}
 									},
 									error: function(){
@@ -186,7 +187,9 @@ window.addEventListener("message", function(e) {
 										console.error("[CR Premium] Erro ao tentar verificar status de anúncio, liberando usuário para assistir agora.");
 										$(ad_bkgrnd).fadeOut(1000);
 										$(ad_container).fadeOut(1000);
-										jwplayer().play();
+										if(jwplayer().getState() == "paused"){
+											jwplayer().play();
+										}
 										jwplayer().setControls(true);
 									}
 								});
@@ -197,7 +200,9 @@ window.addEventListener("message", function(e) {
 					    		console.error("[CR Premium] Erro ao tentar gerar link de anúncio, liberando usuário para assistir agora.");
 							$(ad_bkgrnd).fadeOut(1000);
 							$(ad_container).fadeOut(1000);
-							jwplayer().play();
+							if(jwplayer().getState() == "paused"){
+								jwplayer().play();
+							}
 							jwplayer().setControls(true);
 						}
 					});
