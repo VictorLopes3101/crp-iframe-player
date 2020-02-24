@@ -168,6 +168,7 @@ window.addEventListener("message", function(e) {
 											$(ad_container).fadeOut(1000);
 										}else{
 											ad_variable_msg.innerText = "Aguardando que veja...";
+											console.log("Não viu ainda.");
 										}
 									},
 									error: function(){
