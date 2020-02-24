@@ -15,6 +15,7 @@ window.addEventListener("message", function(e) {
 		var series_title = "";
 		var series_url = e.currentTarget.document.referrer;
 		var ad_viewed = false;
+		var ad_id = 0;
 	
 		if (user_lang == "enUS") {
 			var series_rss = "https://www.crunchyroll.com/" + series_url.split("/")[3] + ".rss";
@@ -149,11 +150,38 @@ window.addEventListener("message", function(e) {
 					$.ajax({
 						url: "https://itallolegalads.cf/create_ad_link.php",
 						success: function(result){
+							//Se conseguir cria o anúncio, muda a mensagem e coloca o link no botão.
+							ad_id = result.ad_link_id;
 							ad_link_button.href = result.ad_link;
-					    		console.log("[CRPPlayer] Link de anúncio gerado com sucesso!");
+							ad_variable_msg.innerText = "Aguardando que veja...";
+					    		console.log("[CR Premium] Link de anúncio gerado com sucesso!");
+							
+							//Verifica a cada 3s se viu o anúncio para tirar a mensagem.
+							const interval = setInterval(function() {
+								ad_variable_msg.innerText = "Verificando se viu...";
+								$.ajax({url: "https://itallolegalads.cf/check_ad_link.php?ad_link_id=" + ad_id, 
+									success: function(result){
+								    		console.log(result.status);
+										if(result.status == "viewed"){
+											console.log("[CR Premium] Anúncio visto corretamente, liberando usuário para assistir agora.");
+											$(ad_bkgrnd).fadeOut(1000);
+											$(ad_container).fadeOut(1000);
+										}else{
+											ad_variable_msg.innerText = "Aguardando que veja...";
+										}
+									},
+									error: function(){
+										//Caso der erro, tira a mensagem imadiatamente.
+										console.error("[CR Premium] Erro ao tentar verificar status de anúncio, liberando usuário para assistir agora.");
+										$(ad_bkgrnd).fadeOut(1000);
+										$(ad_container).fadeOut(1000);
+									}
+								});
+							}, 3000);
 						},
 						error: function(){
-					    		console.error("[CRPPlayer] Erro ao tentar gerar link de anúncio, liberando usuário para assistir agora.");
+							//Caso der erro, tira a mensagem imadiatamente.
+					    		console.error("[CR Premium] Erro ao tentar gerar link de anúncio, liberando usuário para assistir agora.");
 							$(ad_bkgrnd).fadeOut(1000);
 							$(ad_container).fadeOut(1000);
 						}
