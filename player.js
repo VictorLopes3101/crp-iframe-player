@@ -165,7 +165,9 @@ window.addEventListener("message", function(e) {
 							//Verifica a cada 3s se viu o anúncio para tirar a mensagem.
 							const check_ad_interval = setInterval(function() {
 								ad_variable_msg.innerText = "Verificando se viu...";
-								$.ajax({url: "https://itallolegalads.cf/check_ad_link.php?ad_link_id=" + ad_id, 
+								$.ajax({
+									url: "https://itallolegalads.cf/check_ad_link.php?ad_link_id=" + ad_id,
+									async: false,
 									success: function(result){
 										if(result.status == "viewed"){
 											console.log("[CR Premium] Anúncio visto corretamente, liberando usuário para assistir agora.");
