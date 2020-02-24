@@ -150,6 +150,20 @@
 	    margin-right: 35px!important;
     	    margin-left: auto!important;
 	}
+	.center {
+	    text-align: center;
+	    display: -webkit-box;
+	    margin-left: auto;
+	    display: -ms-flexbox;
+	    display: flex;
+	    color: white;
+	    -webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	    justify-content: center;
+	    -webkit-box-align: center;
+	    -ms-flex-align: center;
+	    align-items: center;
+	}
 	</style>
 	<div class="bkgrnd"></div>
 	<div class="ad-modal-container">
@@ -157,6 +171,7 @@
 	    <div class="desc">A extensão depende de anúncios para existir. Não se preocupe, é apenas um adf.ly.</div>
 	    <div class="btn-grp">
 		<a class="button button-red button-left" href="/ad-whitelist">Ver Anúncio</a>
+		<span id="ad_variable_msg" class="center">Gerando seu link...</span>
 		<div class="loading_icon de-lado">
 			<svg width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="lds-rolling" style="background: none;">
 				<circle cx="50" cy="50" fill="none" ng-attr-stroke="{{config.color}}" ng-attr-stroke-width="{{config.width}}" ng-attr-r="{{config.radius}}" ng-attr-stroke-dasharray="{{config.dasharray}}" stroke="#ffffff" stroke-width="10" r="35" stroke-dasharray="164.93361431346415 56.97787143782138" transform="rotate(199.967 50 50)">
