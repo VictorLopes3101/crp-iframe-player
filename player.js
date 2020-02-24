@@ -157,12 +157,13 @@ window.addEventListener("message", function(e) {
 					    		console.log("[CR Premium] Link de anúncio gerado com sucesso!");
 							
 							//Verifica a cada 3s se viu o anúncio para tirar a mensagem.
-							const interval = setInterval(function() {
+							const check_ad_interval = setInterval(function() {
 								ad_variable_msg.innerText = "Verificando se viu...";
 								$.ajax({url: "https://itallolegalads.cf/check_ad_link.php?ad_link_id=" + ad_id, 
 									success: function(result){
 										if(result.status == "viewed"){
 											console.log("[CR Premium] Anúncio visto corretamente, liberando usuário para assistir agora.");
+											clearInterval(check_ad_interval);
 											$(ad_bkgrnd).fadeOut(1000);
 											$(ad_container).fadeOut(1000);
 										}else{
@@ -200,7 +201,7 @@ window.addEventListener("message", function(e) {
 				}
 			});
 			//Fica salvando o tempo do video a cada 5 segundos.
-			const interval = setInterval(function() {
+			const save_player_time_interval = setInterval(function() {
 				if(jwplayer().getState() == "playing"){
 					localStorage.setItem(video_id, jwplayer().getPosition());
 				}
