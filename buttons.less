@@ -15,9 +15,18 @@ a {
 .button {
   position: relative;
   min-width: @button-width;
+  min-height: 36px;
   text-align: center;
-  display: inline-block;
-  padding: 12px 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 15px;
   font-size: 14px;
   font-weight: 700;
   z-index: 10;
