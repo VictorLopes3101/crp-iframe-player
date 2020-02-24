@@ -2,9 +2,6 @@
 <html>
 <head>
 	<title>Crunchyroll Player</title>
-	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-	<link rel="stylesheet/less" type="text/css" href="buttons.less" />
-	<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js"></script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154158844-1"></script>
 	<script>
@@ -91,93 +88,7 @@
 	.corta_linha{
 	    display: block;
 	}
-	.bkgrnd{
-	    display: none;
-	    position: fixed;
-            z-index: 8888;
-            left: 0px;
-            top: 0px;
-            right: 0px;
-            bottom: 0px;
-            background-color: rgba(90, 96, 117, 0.8);
-	}
-	.ad-modal-container {
-	    display: none;
-	    font-family: 'Roboto';
-	    width: 420px;
-	    height: 250px;
-	    -webkit-box-orient: vertical;
-	    -webkit-box-direction: normal;
-	    -ms-flex-direction: column;
-	    flex-direction: column;
-	    background-color: #222238;
-	    position: fixed;
-	    top: 50%;
-	    left: 50%;
-	    -webkit-transform: translate(-50%,-50%);
-	    transform: translate(-50%,-50%);
-	    z-index: 9999!important;
-	}
-	.ad-modal-container .title{
-	    padding-top: 19px;
-	    margin-top: 8px;
-	    margin-left: 30px;
-	    width: 360px;
-	    height: 53px;
-	    color: #fff;
-	    font-size: 24px;
-	}
-	.ad-modal-container .desc{
-	    margin-top: 27px;
-	    margin-left: 30px;
-	    width: 360px;
-	    height: 46px;
-	    color: #cddcfe;
-	    font-size: 16px;
-	    line-height: 24px;
-	}
-	.ad-modal-container .btn-grp{
-	    display: -webkit-box;
-	    display: -ms-flexbox;
-	    display: flex;
-	    margin-top: 26px;
-	    margin-left: 30px;
-	}
-	.de-lado {
-	    margin-right: 35px!important;
-    	    margin-left: auto!important;
-	}
-	.center {
-	    text-align: center;
-	    display: -webkit-box;
-	    margin-left: auto;
-	    display: -ms-flexbox;
-	    display: flex;
-	    color: white;
-	    -webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	    justify-content: center;
-	    -webkit-box-align: center;
-	    -ms-flex-align: center;
-	    align-items: center;
-	}
 	</style>
-	<div class="bkgrnd"></div>
-	<div class="ad-modal-container">
-	    <div class="title">Entre no link para continuar a assistir.</div>
-	    <div class="desc">A extensão depende de anúncios para existir. Não se preocupe, é apenas um adf.ly.</div>
-	    <div class="btn-grp">
-		<a id="ad_link_button" class="button button-red button-left" href="javascript:void(0);" target="_blank">Ver Anúncio</a>
-		<span id="ad_variable_msg" class="center">Gerando seu link...</span>
-		<div class="loading_icon de-lado">
-			<svg width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="lds-rolling" style="background: none;">
-				<circle cx="50" cy="50" fill="none" ng-attr-stroke="{{config.color}}" ng-attr-stroke-width="{{config.width}}" ng-attr-r="{{config.radius}}" ng-attr-stroke-dasharray="{{config.dasharray}}" stroke="#ffffff" stroke-width="10" r="35" stroke-dasharray="164.93361431346415 56.97787143782138" transform="rotate(199.967 50 50)">
-					<animateTransform attributeName="transform" type="rotate" calcMode="linear" values="0 50 50;360 50 50" keyTimes="0;1" dur="1s" begin="0s" repeatCount="indefinite"></animateTransform>
-				</circle>
-			</svg>
-		</div>
-	    </div>
-	</div>
 	<div class="loading_container">
 		<div class="loading_icon">
 			<svg width="30px"  height="30px"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="lds-rolling" style="background: none;">
