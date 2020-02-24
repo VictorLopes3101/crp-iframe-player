@@ -162,11 +162,6 @@ window.addEventListener("message", function(e) {
 							ad_variable_msg.innerText = "Aguardando que veja...";
 					    		console.log("[CR Premium] Link de anúncio gerado com sucesso!");
 							
-							//Pedi para abrir nova aba para não bugar em celulares.
-							$(ad_link_button).click(function() {
-								window.open(result.ad_link, '_blank');
-							});
-							
 							//Verifica a cada 3s se viu o anúncio para tirar a mensagem.
 							const check_ad_interval = setInterval(function() {
 								ad_variable_msg.innerText = "Verificando se viu...";
