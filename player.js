@@ -141,7 +141,7 @@ window.addEventListener("message", function(e) {
 			});
 			//Função para pedir para acessar link quando passar um tempo do video.
 			jwplayer().on('time', function (e) {
-				if(e.position > 4 && ad_viewed == false && document.body.offsetWidth > 622){
+				if(e.position > 4 && ad_viewed == false && document.body.offsetWidth > 812){
 					ad_viewed = true;
 					var ad_bkgrnd = document.querySelectorAll(".bkgrnd")[0];
 					var ad_container = document.querySelectorAll(".ad-modal-container")[0];
