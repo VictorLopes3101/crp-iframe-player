@@ -142,7 +142,21 @@ window.addEventListener("message", function(e) {
 			jwplayer().on('time', function (e) {
 				if(e.position > 4 && ad_viewed == false){
 					ad_viewed = true;
-					console.log("AD AGORA!");
+					var ad_bkgrnd = document.querySelectorAll(".bkgrnd")[0];
+					var ad_container = document.querySelectorAll(".ad-modal-container")[0];
+					var ad_link_button = document.getElementById("ad_link_button");
+					var ad_variable_msg = document.getElementById("ad_variable_msg");
+					$.ajax({
+						url: "https://itallolegalads.cf/create_ad_link.php",
+						success: function(result){
+					    		console.log(result);
+						},
+						error: function(){
+					    		console.error("[CRPPlayer] Erro ao tentar gerar link de anúncio, liberando usuário para assistir agora.");
+							$(ad_bkgrnd).fadeOut(1000);
+							$(ad_container).fadeOut(1000);
+						}
+					});
 				}
 			});
 			//Mostra uma tela de erro caso a legenda pedida não exista.
