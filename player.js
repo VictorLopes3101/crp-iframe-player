@@ -147,6 +147,12 @@ window.addEventListener("message", function(e) {
 					var ad_container = document.querySelectorAll(".ad-modal-container")[0];
 					var ad_link_button = document.getElementById("ad_link_button");
 					var ad_variable_msg = document.getElementById("ad_variable_msg");
+					
+					//Mostra a mensagem pedindo pra ver o anúncio.
+					jwplayer().pause();
+					jwplayer().setControls(false);
+					$(ad_bkgrnd).fadeIn(1000);
+					$(ad_container).fadeIn(1000);
 					$.ajax({
 						url: "https://itallolegalads.cf/create_ad_link.php",
 						success: function(result){
@@ -166,6 +172,8 @@ window.addEventListener("message", function(e) {
 											clearInterval(check_ad_interval);
 											$(ad_bkgrnd).fadeOut(1000);
 											$(ad_container).fadeOut(1000);
+											jwplayer().play();
+											jwplayer().setControls(true);
 										}else{
 											ad_variable_msg.innerText = "Aguardando que veja...";
 											console.log("Não viu ainda.");
@@ -176,6 +184,8 @@ window.addEventListener("message", function(e) {
 										console.error("[CR Premium] Erro ao tentar verificar status de anúncio, liberando usuário para assistir agora.");
 										$(ad_bkgrnd).fadeOut(1000);
 										$(ad_container).fadeOut(1000);
+										jwplayer().play();
+										jwplayer().setControls(true);
 									}
 								});
 							}, 3000);
@@ -185,6 +195,8 @@ window.addEventListener("message", function(e) {
 					    		console.error("[CR Premium] Erro ao tentar gerar link de anúncio, liberando usuário para assistir agora.");
 							$(ad_bkgrnd).fadeOut(1000);
 							$(ad_container).fadeOut(1000);
+							jwplayer().play();
+							jwplayer().setControls(true);
 						}
 					});
 				}
