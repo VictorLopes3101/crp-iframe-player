@@ -33,7 +33,7 @@ video {
 }
 
 .jw-progress {
-	background-color: rgb(244, 117, 33);
+	background-color: rgb(244, 117, 33)!important;
 }
 
 .loading_container {
