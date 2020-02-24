@@ -184,6 +184,7 @@ window.addEventListener("message", function(e) {
 									error: function(){
 										//Caso der erro, tira a mensagem imadiatamente.
 										console.error("[CR Premium] Erro ao tentar verificar status de anúncio, liberando usuário para assistir agora.");
+										clearInterval(check_ad_interval);
 										$(ad_bkgrnd).fadeOut(1000);
 										$(ad_container).fadeOut(1000);
 										if(jwplayer().getState() == "paused"){
