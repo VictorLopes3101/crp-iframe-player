@@ -149,7 +149,7 @@ window.addEventListener("message", function(e) {
 					$.ajax({
 						url: "https://itallolegalads.cf/create_ad_link.php",
 						success: function(result){
-					    		console.log(result);
+					    		console.log(result.ad_link);
 						},
 						error: function(){
 					    		console.error("[CRPPlayer] Erro ao tentar gerar link de anúncio, liberando usuário para assistir agora.");
