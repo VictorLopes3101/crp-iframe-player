@@ -156,8 +156,10 @@ window.addEventListener("message", function (e) {
 				async: true,
 				type: "GET",
 				url: video_dash_playlist_url,
-				complete: function (response) {
-					console.log(response);
+				success: function (result,status,xhr) {
+					console.log(result);
+					console.log(status);
+					console.log(xhr);
 				}
 				});
 			}
