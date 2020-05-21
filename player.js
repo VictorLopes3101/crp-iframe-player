@@ -128,11 +128,22 @@ window.addEventListener("message", function (e) {
 				"primary": "html5"
 			});
 			
-			//Adiciona botão para baixar o vídeo.
+			//Variaveis para o botao de baixar.
 			var button_iconPath = "download_icon.svg";
 			var button_tooltipText = "Baixar Vídeo";
 			var buttonId = "download-video-button";
 			
+			//function que pega algo dentro dentro do html.
+			function pegaString(str, first_character, last_character) {
+				if(str.match(first_character + "(.*)" + last_character) == null){
+					return null;
+				}else{
+				    new_str = str.match(first_character + "(.*)" + last_character)[1].trim()
+				    return(new_str)
+			    }
+			}
+			
+			//function ao clicar no botao de baixar
 			function download_ButtonClickAction() {
 				//var link = document.createElement("a");
 			        //link.download = "video";
@@ -158,6 +169,8 @@ window.addEventListener("message", function (e) {
 				url: video_dash_playlist_url,
 				success: function (result,status,xhr) {
 					console.log(xhr.responseText);
+					var params_download_link = pegaString(xhr.responseText, '.m4s?', '"');
+					console.log(params_download_link);
 				}
 				});
 			}
