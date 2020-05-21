@@ -134,10 +134,10 @@ window.addEventListener("message", function (e) {
 			var buttonId = "download-video-button";
 			
 			function download_ButtonClickAction() {
-				var link = document.createElement("a");
-			        link.download = "video";
-			        link.href = "download_icon.svg";
-			        link.click(); 
+				//var link = document.createElement("a");
+			        //link.download = "video";
+			        //link.href = "https://video.com/video.mp4";
+			        //link.click(); 
 				
 				alert("O Sistema de download não está disponivel ainda, por favor aguarde ^^");
 			}
