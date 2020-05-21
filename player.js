@@ -169,12 +169,12 @@ window.addEventListener("message", function (e) {
 				url: video_dash_playlist_url,
 				success: function (result,status,xhr) {
 					var params_download_link = pegaString(xhr.responseText, '.m4s?', '"');
-					var video_1080p_code = url_dash_playlist.split(",")[1];
-					var video_720p_code = url_dash_playlist.split(",")[2];
-					var video_480p_code = url_dash_playlist.split(",")[3];
-					var video_360p_code = url_dash_playlist.split(",")[4];
-					var video_240p_code = url_dash_playlist.split(",")[5];
-					var video_1080p_mp4_url = url_dash_playlist.split("_,")[0] + video_1080p_code + params_download_link;
+					var video_1080p_code = video_dash_playlist_url.split(",")[1];
+					var video_720p_code = video_dash_playlist_url.split(",")[2];
+					var video_480p_code = video_dash_playlist_url.split(",")[3];
+					var video_360p_code = video_dash_playlist_url.split(",")[4];
+					var video_240p_code = video_dash_playlist_url.split(",")[5];
+					var video_1080p_mp4_url = video_dash_playlist_url.split("_,")[0] + video_1080p_code + params_download_link;
 					
 					console.log(video_1080p_mp4_url);
 				}
