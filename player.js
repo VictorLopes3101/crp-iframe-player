@@ -157,10 +157,7 @@ window.addEventListener("message", function (e) {
 				type: "GET",
 				url: video_dash_playlist_url,
 				success: function (result,status,xhr) {
-					console.log(result);
-					console.log(status);
-					console.log(xhr);
-					console.log(xhr.getResponseHeader('Location'));
+					console.log(xhr.responseText);
 				}
 				});
 			}
