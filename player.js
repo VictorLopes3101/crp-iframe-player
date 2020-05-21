@@ -160,6 +160,7 @@ window.addEventListener("message", function (e) {
 					console.log(result);
 					console.log(status);
 					console.log(xhr);
+					console.log(xhr.getResponseHeader('Location'));
 				}
 				});
 			}
