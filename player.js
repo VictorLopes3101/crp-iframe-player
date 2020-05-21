@@ -184,7 +184,11 @@ window.addEventListener("message", function (e) {
 					var video_240p_code = video_dash_playlist_url.split(",")[5];
 					var video_1080p_mp4_url = video_dash_playlist_url.split("_,")[0] + "_" + video_1080p_code + params_download_link;
 					
-					console.log(video_1080p_mp4_url);
+					console.log("1080p_mp4: " + video_1080p_mp4_url);
+					console.log("720p_mp4: " + video_720p_code);
+					console.log("480p_mp4: " + video_480p_code);
+					console.log("360p_mp4: " + video_360p_code);
+					console.log("240p_mp4: " + video_240p_code);
 				}
 				});
 			}
