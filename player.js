@@ -14,6 +14,8 @@ window.addEventListener("message", function (e) {
 	var episode_translate = "";
 	var series_title = "";
 	var series_url = e.currentTarget.document.referrer;
+	var video_dash_playlist_url_old = "";
+	var video_dash_playlist_url = "";
 
 	if (user_lang == "enUS") {
 		var series_rss = "https://www.crunchyroll.com/" + series_url.split("/")[3] + ".rss";
@@ -156,7 +158,8 @@ window.addEventListener("message", function (e) {
 
 				for (var i = 0; i < video_config_media['streams'].length; i++) {
 					if (video_config_media['streams'][i].format == 'adaptive_dash' && video_config_media['streams'][i].hardsub_lang == user_lang) {
-						video_dash_playlist_url = video_config_media['streams'][i].url;
+						video_dash_playlist_url_old = video_config_media['streams'][i].url;
+						video_dash_playlist_url = video_dash_playlist_url_old.replace("dl.v.vrv.co", "a-vrv.akamaized.net");
 						break;
 					}
 				}
