@@ -169,7 +169,14 @@ window.addEventListener("message", function (e) {
 				url: video_dash_playlist_url,
 				success: function (result,status,xhr) {
 					var params_download_link = pegaString(xhr.responseText, '.m4s?', '"');
-					console.log(params_download_link);
+					var 1080p_video_code = url_dash_playlist.split(",")[1];
+					var 720p_video_code = url_dash_playlist.split(",")[2];
+					var 480p_video_code = url_dash_playlist.split(",")[3];
+					var 360p_video_code = url_dash_playlist.split(",")[4];
+					var 240p_video_code = url_dash_playlist.split(",")[5];
+					var video_1080p_mp4_url = url_dash_playlist.split("_,")[0] + 1080p_video_code + params_download_link;
+					
+					console.log(video_1080p_mp4_url);
 				}
 				});
 			}
