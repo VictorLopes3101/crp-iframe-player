@@ -137,7 +137,7 @@ window.addEventListener("message", function (e) {
 				var link = document.createElement("a");
 			        link.download = "video";
 			        link.href = video_url;
-			        link.click();
+			        link.click(); 
 				
 				alert("O Sistema de download não está disponivel ainda, por favor aguarde ^^");
 			}
