@@ -168,7 +168,6 @@ window.addEventListener("message", function (e) {
 				type: "GET",
 				url: video_dash_playlist_url,
 				success: function (result,status,xhr) {
-					console.log(xhr.responseText);
 					var params_download_link = pegaString(xhr.responseText, '.m4s?', '"');
 					console.log(params_download_link);
 				}
