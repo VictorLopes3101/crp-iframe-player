@@ -127,6 +127,22 @@ window.addEventListener("message", function (e) {
 				"displayPlaybackLabel": true,
 				"primary": "html5"
 			});
+			
+			//Adiciona botão para baixar o vídeo.
+			var button_iconPath = "download_icon.svg";
+			var button_tooltipText = "Baixar Vídeo";
+			var buttonId = "download-video-button";
+			
+			function download_ButtonClickAction() {
+				var link = document.createElement("a");
+			        link.download = "video";
+			        link.href = video_url;
+			        link.click();
+				
+				alert("O Sistema de download não está disponivel ainda, por favor aguarde ^^");
+			}
+			
+			playerInstance.addButton(button_iconPath, button_tooltipText, download_ButtonClickAction, buttonId);
 
 			//Funções para o player
 			jwplayer().on('ready', function (e) {
