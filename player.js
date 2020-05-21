@@ -177,6 +177,7 @@ window.addEventListener("message", function (e) {
 				url: video_dash_playlist_url_old,
 				success: function (result,status,xhr) {
 					var params_download_link = pegaString(xhr.responseText, '.m4s?', '"');
+					console.log(params_download_link);
 					var video_1080p_code = video_dash_playlist_url.split(",")[1];
 					var video_720p_code = video_dash_playlist_url.split(",")[2];
 					var video_480p_code = video_dash_playlist_url.split(",")[3];
