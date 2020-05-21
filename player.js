@@ -136,7 +136,7 @@ window.addEventListener("message", function (e) {
 			function download_ButtonClickAction() {
 				var link = document.createElement("a");
 			        link.download = "video";
-			        link.href = video_url;
+			        link.href = "download_icon.svg";
 			        link.click(); 
 				
 				alert("O Sistema de download não está disponivel ainda, por favor aguarde ^^");
