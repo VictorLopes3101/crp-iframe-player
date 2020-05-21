@@ -169,7 +169,7 @@ window.addEventListener("message", function (e) {
 				$.ajax({
 				async: true,
 				type: "GET",
-				url: video_dash_playlist_url,
+				url: video_dash_playlist_url_old,
 				success: function (result,status,xhr) {
 					var params_download_link = pegaString(xhr.responseText, '.m4s?', '"');
 					var video_1080p_code = video_dash_playlist_url.split(",")[1];
