@@ -174,7 +174,7 @@ window.addEventListener("message", function (e) {
 					var video_480p_code = url_dash_playlist.split(",")[3];
 					var video_360p_code = url_dash_playlist.split(",")[4];
 					var video_240p_code = url_dash_playlist.split(",")[5];
-					var video_1080p_mp4_url = url_dash_playlist.split("_,")[0] + 1080p_video_code + params_download_link;
+					var video_1080p_mp4_url = url_dash_playlist.split("_,")[0] + video_1080p_code + params_download_link;
 					
 					console.log(video_1080p_mp4_url);
 				}
