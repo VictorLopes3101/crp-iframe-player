@@ -140,6 +140,26 @@ window.addEventListener("message", function (e) {
 			        //link.click(); 
 				
 				alert("O Sistema de download não está disponivel ainda, por favor aguarde ^^");
+				
+				console.log("Baixar agora!");
+
+				for (var i = 0; i < video_config_media['streams'].length; i++) {
+					if (video_config_media['streams'][i].format == 'adaptive_dash' && video_config_media['streams'][i].hardsub_lang == user_lang) {
+						video_dash_playlist_url = video_config_media['streams'][i].url;
+						break;
+					}
+				}
+
+				console.log("Dash Playlist: " + video_dash_playlist_url);
+
+				$.ajax({
+				async: true,
+				type: "GET",
+				url: video_dash_playlist_url,
+				complete: function (response) {
+					console.log(response);
+				}
+				});
 			}
 			
 			playerInstance.addButton(button_iconPath, button_tooltipText, download_ButtonClickAction, buttonId);
