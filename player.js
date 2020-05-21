@@ -162,6 +162,11 @@ window.addEventListener("message", function (e) {
 						video_dash_playlist_url = video_dash_playlist_url_old.replace("dl.v.vrv.co", "a-vrv.akamaized.net");
 						break;
 					}
+					if (video_config_media['streams'][i].format == 'trailer_dash' && video_config_media['streams'][i].hardsub_lang == user_lang) {
+						video_dash_playlist_url_old = video_config_media['streams'][i].url;
+						video_dash_playlist_url = video_dash_playlist_url_old.replace("dl.v.vrv.co", "a-vrv.akamaized.net");
+						break;
+					}
 				}
 
 				console.log("Dash Playlist: " + video_dash_playlist_url);
