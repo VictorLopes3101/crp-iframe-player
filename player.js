@@ -18,6 +18,7 @@ window.addEventListener("message", function (e) {
 	var video_dash_playlist_url_only_trailer = "";
 	var video_dash_playlist_url_old = "";
 	var video_dash_playlist_url = "";
+	var video_1080p_dash_playlist_url = "";
 
 	if (user_lang == "enUS") {
 		var series_rss = "https://www.crunchyroll.com/" + series_url.split("/")[3] + ".rss";
@@ -206,7 +207,7 @@ window.addEventListener("message", function (e) {
 				//Se o episodio for apenas para usuarios premium
 				if(is_ep_premium_only == true) {
 					var video_1080p_dash_playlist_url_no_clipe = video_m3u8_array[1].replace("/clipFrom/0000/clipTo/" + video_config_media['metadata']['duration'] + "/index.m3u8", ",.urlset/manifest.mpd");
-					var video_1080p_dash_playlist_url = video_1080p_dash_playlist_url_no_clipe.replace(video_1080p_dash_playlist_url_no_clipe.split("_")[0] + "_", video_1080p_dash_playlist_url_no_clipe.split("_")[0] + "_,");
+					video_1080p_dash_playlist_url = video_1080p_dash_playlist_url_no_clipe.replace(video_1080p_dash_playlist_url_no_clipe.split("_")[0] + "_", video_1080p_dash_playlist_url_no_clipe.split("_")[0] + "_,");
 					
 					$.ajax({
 						async: true,
