@@ -183,7 +183,6 @@ window.addEventListener("message", function (e) {
 						url: video_dash_playlist_url_old,
 						success: function (result,status,xhr) {
 							var params_download_link = pegaString(xhr.responseText, '.m4s?', '"');
-							console.log(params_download_link);
 							var video_1080p_code = video_dash_playlist_url.split(",")[2];
 							var video_720p_code = video_dash_playlist_url.split(",")[1];
 							var video_480p_code = video_dash_playlist_url.split(",")[3];
@@ -208,6 +207,16 @@ window.addEventListener("message", function (e) {
 				if(is_ep_premium_only == true) {
 					var video_1080p_dash_playlist_url_no_clipe = video_m3u8_array[1].replace("/clipFrom/0000/clipTo/" + video_config_media['metadata']['duration'] + "/index.m3u8", ",.urlset/manifest.mpd");
 					var video_1080p_dash_playlist_url = video_1080p_dash_playlist_url_no_clipe.replace(video_1080p_dash_playlist_url_no_clipe.split("_")[0] + "_", video_1080p_dash_playlist_url_no_clipe.split("_")[0] + "_,");
+					
+					$.ajax({
+						async: true,
+						type: "GET",
+						url: video_1080p_dash_playlist_url,
+						success: function (result,status,xhr) {
+							var params_download_link_1080p = pegaString(xhr.responseText, '.m4s?', '"');
+							console.log(params_download_link_1080p);
+						}
+					});
 					
 					var video_720p_playlist_url = video_m3u8_array[0];
 					var video_480p_playlist_url = video_m3u8_array[2];
