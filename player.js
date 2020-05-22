@@ -170,6 +170,7 @@ window.addEventListener("message", function (e) {
 				
 				console.log("is_ep_premium_only: " + is_ep_premium_only);
 				
+				//Se o episodio não for apenas para premium pega as urls de um jeito mais facil
 				if(is_ep_premium_only == false) {
 					video_dash_playlist_url_old = player_current_playlist.replace("master.m3u8","manifest.mpd");
 					video_dash_playlist_url = player_current_playlist.replace("dl.v.vrv.co","a-vrv.akamaized.net");
@@ -202,6 +203,17 @@ window.addEventListener("message", function (e) {
 							console.log("240p_mp4: " + video_240p_mp4_url);
 						}
 					});
+				}
+				//Se o episodio for apenas para usuarios premium
+				if(is_ep_premium_only == true) {
+					var video_1080p_playlist_url = video_m3u8_array[1];
+					var video_720p_playlist_url = video_m3u8_array[0];
+					var video_480p_playlist_url = video_m3u8_array[2];
+					var video_360p_playlist_url = video_m3u8_array[3];
+					var video_240p_playlist_url = video_m3u8_array[4];
+					
+					console.log(video_1080p_playlist_url);
+					
 				}
 			}
 			
