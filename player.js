@@ -14,6 +14,7 @@ window.addEventListener("message", function (e) {
 	var episode_translate = "";
 	var series_title = "";
 	var series_url = e.currentTarget.document.referrer;
+	var is_ep_premium_only = null;
 	var video_dash_playlist_url_only_trailer = "";
 	var video_dash_playlist_url_old = "";
 	var video_dash_playlist_url = "";
@@ -157,9 +158,19 @@ window.addEventListener("message", function (e) {
 				
 				console.log("Baixar agora!");
 				
+				//Pega a url da playlist atual
 				player_current_playlist = jwplayer().getPlaylist()[0].file;
 				
 				console.log("Playlist Atual:" + player_current_playlist);
+				
+				//Verifica se o ep é so pra usuarios premium
+				if(jwplayer().getPlaylist()[0].file.indexOf('blob:') !== -1) {
+					is_ep_premium_only = true;
+				}else{
+					is_ep_premium_only = false;
+				}
+				
+				console.log("is_ep_premium_only: " + is_ep_premium_only):
 				
 				video_dash_playlist_url_old = player_current_playlist.replace("master.m3u8","manifest.mpd");
 				video_dash_playlist_url = player_current_playlist.replace("dl.v.vrv.co","a-vrv.akamaized.net");
