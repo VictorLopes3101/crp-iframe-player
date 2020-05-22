@@ -18,11 +18,6 @@ window.addEventListener("message", function (e) {
 	var video_dash_playlist_url_only_trailer = "";
 	var video_dash_playlist_url_old = "";
 	var video_dash_playlist_url = "";
-	var video_1080p_mp4_url = "";
-	var video_720p_mp4_url = "";
-	var video_480p_mp4_url = "";
-	var video_360p_mp4_url = "";
-	var video_240p_mp4_url = "";
 
 	if (user_lang == "enUS") {
 		var series_rss = "https://www.crunchyroll.com/" + series_url.split("/")[3] + ".rss";
@@ -194,11 +189,11 @@ window.addEventListener("message", function (e) {
 							var video_360p_code = video_dash_playlist_url.split(",")[4];
 							var video_240p_code = video_dash_playlist_url.split(",")[5];
 
-							video_1080p_mp4_url = video_dash_playlist_url.split("_,")[0] + "_" + video_1080p_code + params_download_link;
-							video_720p_mp4_url = video_dash_playlist_url.split("_,")[0] + "_" + video_720p_code + params_download_link;
-							video_480p_mp4_url = video_dash_playlist_url.split("_,")[0] + "_" + video_480p_code + params_download_link;
-							video_360p_mp4_url = video_dash_playlist_url.split("_,")[0] + "_" + video_360p_code + params_download_link;
-							video_240p_mp4_url = video_dash_playlist_url.split("_,")[0] + "_" + video_240p_code + params_download_link;
+							var video_1080p_mp4_url = video_dash_playlist_url.split("_,")[0] + "_" + video_1080p_code + params_download_link;
+							var video_720p_mp4_url = video_dash_playlist_url.split("_,")[0] + "_" + video_720p_code + params_download_link;
+							var video_480p_mp4_url = video_dash_playlist_url.split("_,")[0] + "_" + video_480p_code + params_download_link;
+							var video_360p_mp4_url = video_dash_playlist_url.split("_,")[0] + "_" + video_360p_code + params_download_link;
+							var video_240p_mp4_url = video_dash_playlist_url.split("_,")[0] + "_" + video_240p_code + params_download_link;
 
 							console.log("1080p_mp4: " + video_1080p_mp4_url);
 							console.log("720p_mp4: " + video_720p_mp4_url);
@@ -220,7 +215,9 @@ window.addEventListener("message", function (e) {
 						success: function (result,status,xhr) {
 							var params_download_link_1080p = pegaString(xhr.responseText, '.m4s?', '"');
 							var video_1080p_mp4_url_old = video_1080p_dash_playlist_url.split("_,")[0] + "_" + video_1080p_dash_playlist_url.split(",")[1] + params_download_link_1080p;
-							video_1080p_mp4_url = video_1080p_mp4_url_old.replace("dl.v.vrv.co", "a-vrv.akamaized.net");
+							var video_1080p_mp4_url = video_1080p_mp4_url_old.replace("dl.v.vrv.co", "a-vrv.akamaized.net");
+							
+							console.log("1080p_mp4: " + video_1080p_mp4_url);
 						}
 					});
 					
@@ -234,12 +231,12 @@ window.addEventListener("message", function (e) {
 						success: function (result,status,xhr) {
 							var params_download_link_720p = pegaString(xhr.responseText, '.m4s?', '"');
 							var video_720p_mp4_url_old = video_720p_dash_playlist_url.split("_,")[0] + "_" + video_720p_dash_playlist_url.split(",")[1] + params_download_link_720p;
-							video_720p_mp4_url = video_720p_mp4_url_old.replace("dl.v.vrv.co", "a-vrv.akamaized.net");
+							var video_720p_mp4_url = video_720p_mp4_url_old.replace("dl.v.vrv.co", "a-vrv.akamaized.net");
+							
+							console.log("720p_mp4: " + video_720p_mp4_url);
 						}
 					});
 					
-					console.log("1080p_mp4: " + video_1080p_mp4_url);
-					console.log("720p_mp4: " + video_720p_mp4_url);
 					var video_480p_playlist_url = video_m3u8_array[2];
 					var video_360p_playlist_url = video_m3u8_array[3];
 					var video_240p_playlist_url = video_m3u8_array[4];
