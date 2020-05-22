@@ -159,7 +159,7 @@ window.addEventListener("message", function (e) {
 				
 				player_current_playlist = jwplayer().getPlaylist()[0].file;
 				
-				console.log("Playlist Atual:" player_current_playlist);
+				console.log("Playlist Atual:" + player_current_playlist);
 				
 				video_dash_playlist_url_old = player_current_playlist;
 				video_dash_playlist_url = player_current_playlist.replace("master.m3u8","manifest.mpd");
