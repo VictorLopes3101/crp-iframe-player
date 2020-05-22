@@ -214,7 +214,8 @@ window.addEventListener("message", function (e) {
 						url: video_1080p_dash_playlist_url,
 						success: function (result,status,xhr) {
 							var params_download_link_1080p = pegaString(xhr.responseText, '.m4s?', '"');
-							var video_1080p_mp4_url = video_1080p_dash_playlist_url.split("_,")[0] + "_" + video_1080p_dash_playlist_url.split(",")[1] + params_download_link_1080p;
+							var video_1080p_mp4_url_old = video_1080p_dash_playlist_url.split("_,")[0] + "_" + video_1080p_dash_playlist_url.split(",")[1] + params_download_link_1080p;
+							var video_1080p_mp4_url = video_1080p_mp4_url_old.replace("dl.v.vrv.co", "a-vrv.akamaized.net");
 							console.log(params_download_link_1080p);
 							console.log(video_1080p_mp4_url);
 						}
