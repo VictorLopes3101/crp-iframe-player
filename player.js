@@ -214,6 +214,7 @@ window.addEventListener("message", function (e) {
 						url: video_1080p_dash_playlist_url,
 						success: function (result,status,xhr) {
 							var params_download_link_1080p = pegaString(xhr.responseText, '.m4s?', '"');
+							var video_1080p_mp4_url = video_1080p_dash_playlist_url.replace("dl.v.vrv.co", "a-vrv.akamaized.net").video_1080p_dash_playlist_url.split("_,")[0] + "_" + video_1080p_dash_playlist_url.split(",")[1] + params_download_link_1080p;
 							console.log(params_download_link_1080p);
 						}
 					});
@@ -223,7 +224,7 @@ window.addEventListener("message", function (e) {
 					var video_360p_playlist_url = video_m3u8_array[3];
 					var video_240p_playlist_url = video_m3u8_array[4];
 					
-					console.log(video_1080p_dash_playlist_url);
+					//console.log(video_1080p_dash_playlist_url);
 					
 				}
 			}
