@@ -170,7 +170,7 @@ window.addEventListener("message", function (e) {
 					is_ep_premium_only = false;
 				}
 				
-				console.log("is_ep_premium_only: " + is_ep_premium_only):
+				console.log("is_ep_premium_only: " + is_ep_premium_only);
 				
 				video_dash_playlist_url_old = player_current_playlist.replace("master.m3u8","manifest.mpd");
 				video_dash_playlist_url = player_current_playlist.replace("dl.v.vrv.co","a-vrv.akamaized.net");
