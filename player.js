@@ -203,6 +203,7 @@ window.addEventListener("message", function (e) {
 						}
 					});
 				}
+				
 				//Se o episodio for apenas para usuarios premium
 				if(is_ep_premium_only == true) {
 					var video_1080p_dash_playlist_url_no_clipe = video_m3u8_array[1].replace("/clipFrom/0000/clipTo/" + video_config_media['metadata']['duration'] + "/index.m3u8", ",.urlset/manifest.mpd");
@@ -269,9 +270,23 @@ window.addEventListener("message", function (e) {
 						}
 					});
 					
-					var video_240p_playlist_url = video_m3u8_array[4];
+					var video_240p_dash_playlist_url_no_clipe = video_m3u8_array[4].replace("/clipFrom/0000/clipTo/" + video_config_media['metadata']['duration'] + "/index.m3u8", ",.urlset/manifest.mpd");
+					var video_240p_dash_playlist_url = video_240p_dash_playlist_url_no_clipe.replace(video_240p_dash_playlist_url_no_clipe.split("_")[0] + "_", video_240p_dash_playlist_url_no_clipe.split("_")[0] + "_,");
 					
-					//console.log(video_1080p_dash_playlist_url);
+					$.ajax({
+						async: true,
+						type: "GET",
+						url: video_240p_dash_playlist_url,
+						success: function (result,status,xhr) {
+							var params_download_link_240p = pegaString(xhr.responseText, '.m4s?', '"');
+							var video_240p_mp4_url_old = video_240p_dash_playlist_url.split("_,")[0] + "_" + video_240p_dash_playlist_url.split(",")[1] + params_download_link_240p;
+							var video_240p_mp4_url = video_240p_mp4_url_old.replace("dl.v.vrv.co", "a-vrv.akamaized.net");
+							
+							console.log("240p_mp4: " + video_240p_mp4_url);
+						}
+					});
+					
+					//Aqui oque vai fazer depois de pegar os links mp4
 					
 				}
 			}
