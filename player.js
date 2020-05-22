@@ -157,21 +157,12 @@ window.addEventListener("message", function (e) {
 				
 				console.log("Baixar agora!");
 				
-				console.log("Playlist Atual:" + jwplayer().getPlaylist()[0].file);
-
-				for (var i = 0; i < video_config_media['streams'].length; i++) {
-					if (video_config_media['streams'][i].format == 'adaptive_dash' && video_config_media['streams'][i].hardsub_lang == user_lang) {
-						video_dash_playlist_url_old = video_config_media['streams'][i].url;
-						video_dash_playlist_url = video_dash_playlist_url_old.replace("dl.v.vrv.co", "a-vrv.akamaized.net");
-						break;
-					}
-					if (video_config_media['streams'][i].format == 'trailer_dash' && video_config_media['streams'][i].hardsub_lang == user_lang) {
-						video_dash_playlist_url_only_trailer = video_config_media['streams'][i].url;
-						video_dash_playlist_url_old = video_dash_playlist_url_only_trailer.replace("clipFrom/0000/clipTo/120000/", "");
-						video_dash_playlist_url = video_dash_playlist_url_old.replace("dl.v.vrv.co", "a-vrv.akamaized.net");
-						break;
-					}
-				}
+				player_current_playlist = jwplayer().getPlaylist()[0].file;
+				
+				console.log("Playlist Atual:" player_current_playlist);
+				
+				video_dash_playlist_url_old = player_current_playlist;
+				video_dash_playlist_url = player_current_playlist.replace("master.m3u8","manifest.mpd");
 
 				console.log("Dash Playlist: " + video_dash_playlist_url);
 
