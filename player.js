@@ -165,7 +165,7 @@ window.addEventListener("message", function (e) {
 					}
 					if (video_config_media['streams'][i].format == 'trailer_dash' && video_config_media['streams'][i].hardsub_lang == user_lang) {
 						video_dash_playlist_url_only_trailer = video_config_media['streams'][i].url;
-						video_dash_playlist_url_old = video_dash_playlist_url_only_trailer.replace("/clipFrom/0000/clipTo/120000/manifest.mpd", "");
+						video_dash_playlist_url_old = video_dash_playlist_url_only_trailer.replace("clipFrom/0000/clipTo/120000/", "");
 						video_dash_playlist_url = video_dash_playlist_url_old.replace("dl.v.vrv.co", "a-vrv.akamaized.net");
 						break;
 					}
