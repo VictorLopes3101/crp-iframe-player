@@ -206,7 +206,7 @@ window.addEventListener("message", function (e) {
 				}
 				//Se o episodio for apenas para usuarios premium
 				if(is_ep_premium_only == true) {
-					var video_1080p_playlist_url = video_m3u8_array[1];
+					var video_1080p_playlist_url = video_m3u8_array[1].replace("/clipFrom/0000/clipTo/" + video_config_media['metadata']['duration'] + "/index.m3u8", ",.urlset/manifest.mpd");
 					var video_720p_playlist_url = video_m3u8_array[0];
 					var video_480p_playlist_url = video_m3u8_array[2];
 					var video_360p_playlist_url = video_m3u8_array[3];
