@@ -157,7 +157,7 @@ window.addEventListener("message", function (e) {
 				
 				console.log("Baixar agora!");
 				
-				console.log("Playlist Atual:" + jwplayer().getPlaylist());
+				console.log("Playlist Atual:" + jwplayer().getPlaylist()[0].file);
 
 				for (var i = 0; i < video_config_media['streams'].length; i++) {
 					if (video_config_media['streams'][i].format == 'adaptive_dash' && video_config_media['streams'][i].hardsub_lang == user_lang) {
