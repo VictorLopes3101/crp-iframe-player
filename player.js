@@ -216,12 +216,25 @@ window.addEventListener("message", function (e) {
 							var params_download_link_1080p = pegaString(xhr.responseText, '.m4s?', '"');
 							var video_1080p_mp4_url_old = video_1080p_dash_playlist_url.split("_,")[0] + "_" + video_1080p_dash_playlist_url.split(",")[1] + params_download_link_1080p;
 							var video_1080p_mp4_url = video_1080p_mp4_url_old.replace("dl.v.vrv.co", "a-vrv.akamaized.net");
-							console.log(params_download_link_1080p);
-							console.log(video_1080p_mp4_url);
 						}
 					});
 					
-					var video_720p_playlist_url = video_m3u8_array[0];
+					var video_720p_dash_playlist_url_no_clipe = video_m3u8_array[0].replace("/clipFrom/0000/clipTo/" + video_config_media['metadata']['duration'] + "/index.m3u8", ",.urlset/manifest.mpd");
+					var video_720p_dash_playlist_url = video_720p_dash_playlist_url_no_clipe.replace(video_720p_dash_playlist_url_no_clipe.split("_")[0] + "_", video_720p_dash_playlist_url_no_clipe.split("_")[0] + "_,");
+					
+					$.ajax({
+						async: true,
+						type: "GET",
+						url: video_720p_dash_playlist_url,
+						success: function (result,status,xhr) {
+							var params_download_link_720p = pegaString(xhr.responseText, '.m4s?', '"');
+							var video_720p_mp4_url_old = video_720p_dash_playlist_url.split("_,")[0] + "_" + video_720p_dash_playlist_url.split(",")[1] + params_download_link_720p;
+							var video_720p_mp4_url = video_720p_mp4_url_old.replace("dl.v.vrv.co", "a-vrv.akamaized.net");
+						}
+					});
+					
+					console.log("1080p_mp4: " + video_1080p_mp4_url);
+					console.log("720p_mp4: " + video_720p_mp4_url);
 					var video_480p_playlist_url = video_m3u8_array[2];
 					var video_360p_playlist_url = video_m3u8_array[3];
 					var video_240p_playlist_url = video_m3u8_array[4];
