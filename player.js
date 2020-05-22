@@ -28,7 +28,7 @@ window.addEventListener("message", function (e) {
 
 	for (var i = 0; i < video_config_media['streams'].length; i++) {
 		if (video_config_media['streams'][i].format == 'trailer_hls' && video_config_media['streams'][i].hardsub_lang == user_lang) {
-			if (rows_number <= 5) {
+			if (rows_number <= 4) {
 				video_m3u8_array.push(video_config_media['streams'][i].url.replace("clipTo/120000/", "clipTo/" + video_config_media['metadata']['duration'] + "/"));
 				rows_number++;
 			}
@@ -50,9 +50,7 @@ window.addEventListener("message", function (e) {
 		'\n#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1090461,RESOLUTION=640x360,FRAME-RATE=23.974,CODECS="avc1.4d401e,mp4a.40.2"' +
 		'\n' + video_m3u8_array[3] +
 		'\n#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=559942,RESOLUTION=428x240,FRAME-RATE=23.974,CODECS="avc1.42c015,mp4a.40.2"' +
-		'\n' + video_m3u8_array[4] +
-		'\n#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=193544,RESOLUTION=144x80,FRAME-RATE=23.974,CODECS="avc1.42c00c,mp4a.40.2"' +
-		'\n' + video_m3u8_array[5];
+		'\n' + video_m3u8_array[4];
 
 	if (video_stream_url == "") {
 		var blob = new Blob([video_m3u8], {
