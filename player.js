@@ -154,12 +154,10 @@ window.addEventListener("message", function (e) {
 				
 				alert("O Sistema de download não está disponivel ainda, por favor aguarde ^^");
 				
-				console.log("Baixar agora!");
-				
 				//Pega a url da playlist atual
 				player_current_playlist = jwplayer().getPlaylist()[0].file;
 				
-				console.log("Playlist Atual:" + player_current_playlist);
+				//console.log("Playlist Atual:" + player_current_playlist);
 				
 				//Verifica se o ep é so pra usuarios premium
 				if(jwplayer().getPlaylist()[0].file.indexOf('blob:') !== -1) {
@@ -168,7 +166,7 @@ window.addEventListener("message", function (e) {
 					is_ep_premium_only = false;
 				}
 				
-				console.log("is_ep_premium_only: " + is_ep_premium_only);
+				//console.log("is_ep_premium_only: " + is_ep_premium_only);
 				
 				//Se o episodio não for apenas para premium pega as urls de um jeito mais facil
 				if(is_ep_premium_only == false) {
