@@ -156,6 +156,8 @@ window.addEventListener("message", function (e) {
 				alert("O Sistema de download não está disponivel ainda, por favor aguarde ^^");
 				
 				console.log("Baixar agora!");
+				
+				console.log("Playlist Atual:" + jwplayer().getPlaylist());
 
 				for (var i = 0; i < video_config_media['streams'].length; i++) {
 					if (video_config_media['streams'][i].format == 'adaptive_dash' && video_config_media['streams'][i].hardsub_lang == user_lang) {
