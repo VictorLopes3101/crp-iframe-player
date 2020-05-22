@@ -161,8 +161,8 @@ window.addEventListener("message", function (e) {
 				
 				console.log("Playlist Atual:" + player_current_playlist);
 				
-				video_dash_playlist_url_old = player_current_playlist;
-				video_dash_playlist_url = player_current_playlist.replace("master.m3u8","manifest.mpd");
+				video_dash_playlist_url_old = player_current_playlist.replace("master.m3u8","manifest.mpd");
+				video_dash_playlist_url = player_current_playlist.replace("dl.v.vrv.co","a-vrv.akamaized.net");
 
 				console.log("Dash Playlist: " + video_dash_playlist_url);
 
