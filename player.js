@@ -237,7 +237,22 @@ window.addEventListener("message", function (e) {
 						}
 					});
 					
-					var video_480p_playlist_url = video_m3u8_array[2];
+					var video_480p_dash_playlist_url_no_clipe = video_m3u8_array[2].replace("/clipFrom/0000/clipTo/" + video_config_media['metadata']['duration'] + "/index.m3u8", ",.urlset/manifest.mpd");
+					var video_480p_dash_playlist_url = video_480p_dash_playlist_url_no_clipe.replace(video_480p_dash_playlist_url_no_clipe.split("_")[0] + "_", video_480p_dash_playlist_url_no_clipe.split("_")[0] + "_,");
+					
+					$.ajax({
+						async: true,
+						type: "GET",
+						url: video_480p_dash_playlist_url,
+						success: function (result,status,xhr) {
+							var params_download_link_480p = pegaString(xhr.responseText, '.m4s?', '"');
+							var video_480p_mp4_url_old = video_480p_dash_playlist_url.split("_,")[0] + "_" + video_480p_dash_playlist_url.split(",")[1] + params_download_link_480p;
+							var video_480p_mp4_url = video_480p_mp4_url_old.replace("dl.v.vrv.co", "a-vrv.akamaized.net");
+							
+							console.log("480p_mp4: " + video_480p_mp4_url);
+						}
+					});
+					
 					var video_360p_playlist_url = video_m3u8_array[3];
 					var video_240p_playlist_url = video_m3u8_array[4];
 					
