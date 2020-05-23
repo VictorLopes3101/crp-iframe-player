@@ -145,6 +145,27 @@ window.addEventListener("message", function (e) {
 			    }
 			}
 			
+			//funcion que pega o tamanho de um arquivo pela url
+			function getFileSize(url) {
+			    var fileSize = '';
+			    var http = new XMLHttpRequest();
+			    http.open('HEAD', url, false); // false = Synchronous
+
+			    http.send(null); // it will stop here until this http request is complete
+
+			    // when we are here, we already have a response, b/c we used Synchronous XHR
+
+			    if (http.status === 200) {
+				fileSize = http.getResponseHeader('content-length');
+			    }
+
+			    var sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
+			    if (fileSize == 0) return 'n/a';
+			    var i = parseInt(Math.floor(Math.log(fileSize) / Math.log(1024)));
+			    if (i == 0) return fileSize + ' ' + sizes[i];
+			    return (fileSize / Math.pow(1024, i)).toFixed(1) + ' ' + sizes[i];
+			}
+			
 			//function ao clicar no botao de baixar
 			function download_ButtonClickAction() {
 				//var link = document.createElement("a");
