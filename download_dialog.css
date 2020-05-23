@@ -1,5 +1,5 @@
-.modal{
-	background: #eeeaea;
+.modal {
+    background: #eeeaea;
     text-align: center;
     width: 230px;
     height: 270px;
@@ -16,7 +16,7 @@
     -webkit-transform: translate3d(0, -900%, 0);
     transform: translate3d(0, -900%, 0);
 }
-.close-modal{
+.close-modal {
 	background: none;
     border: none;
     position: absolute;
@@ -26,7 +26,7 @@
     color: #334;
     outline: none;
 }
-.download-item{
+.download-item {
 	display: table;
     vertical-align: middle;
     height: 55px;
@@ -65,7 +65,7 @@
     width: 13%;
     text-align: left;
 }
-.down-icon{
+.down-icon {
 	transition: background-size 2s ease-in;
 	-moz-transition: background-size 2s ease-in;
 	-ms-transition: background-size 2s ease-in;
@@ -77,6 +77,6 @@
     background-position: center;
     background-repeat: no-repeat;
 }
-.down-icon:hover{
+.down-icon:hover {
 	background-size: 50%;
 }
