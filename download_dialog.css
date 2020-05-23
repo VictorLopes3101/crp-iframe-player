@@ -1,0 +1,82 @@
+.modal{
+	background: #eeeaea;
+    text-align: center;
+    width: 230px;
+    height: 270px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 3px;
+    margin: auto;
+    padding: 20px;
+    -webkit-filter: url(#blur);
+    filter: url(#blur);
+    -webkit-transform: translate3d(0, -900%, 0);
+    transform: translate3d(0, -900%, 0);
+}
+.close-modal{
+	background: none;
+    border: none;
+    position: absolute;
+    font-size: 20px;
+    right: 10px;
+    top: 10px;
+    color: #334;
+    outline: none;
+}
+.download-item{
+	display: table;
+    vertical-align: middle;
+    height: 55px;
+    width: 100%;
+}
+.partdditem {
+    display: table-cell;
+    vertical-align: middle;
+    margin: 6%;
+}
+.not-copyable {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.hdlabel {
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    width: 4%;
+    text-align: right;
+    padding-right: 2px;
+}
+.size {
+    font-family: SFProDisplay-Regular;
+    font-size: 15px;
+    text-align: left;
+    opacity: .5;
+    width: 14%;
+}
+.quality {
+    font-family: SFProDisplay-Semibold;
+    font-size: 15px;
+    width: 13%;
+    text-align: left;
+}
+.down-icon{
+	transition: background-size 2s ease-in;
+	-moz-transition: background-size 2s ease-in;
+	-ms-transition: background-size 2s ease-in;
+	-o-transition: background-size 2s ease-in;
+	-webkit-transition: background-size 2s ease-in;
+	background-image: url(https://fonts.gstatic.com/s/i/materialicons/get_app/v5/24px.svg?download=true);
+	cursor: pointer;
+    width: 12%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.down-icon:hover{
+	background-size: 50%;
+}
