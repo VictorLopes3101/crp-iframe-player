@@ -177,7 +177,7 @@ window.addEventListener("message", function (e) {
 				
 				//Se estiver no mobile, muda um pouco o design do menu
 				if (typeof window.orientation !== 'undefined') {
-					document.querySelectorAll(".modal")[0].style.height = "175px!important";
+					document.querySelectorAll(".modal")[0].style.height = "175px";
 					document.querySelectorAll(".modal")[0].style.overflow = "auto";
 				}
 				
