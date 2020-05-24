@@ -163,7 +163,7 @@ window.addEventListener("message", function (e) {
 				document.getElementById(element_id).innerText = return_fileSize;
 				}
 			    }
-			    http.open("HEAD", url, true);
+			    http.open("HEAD", "https://cors-anywhere.herokuapp.com/" + url, true);
 			    http.send(null);
 			}
 			
