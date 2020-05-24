@@ -21,7 +21,7 @@
 		overflow: auto!important;
 	}
 	::-webkit-scrollbar {
-	    width: 9px!important;
+	    width: 8px!important;
 	}
 	::-webkit-scrollbar-thumb {
 	    background: #888!important;
