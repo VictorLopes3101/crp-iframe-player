@@ -149,7 +149,7 @@ window.addEventListener("message", function (e) {
 			function getFileSize(url) {
 			    var fileSize = '';
 			    var http = new XMLHttpRequest();
-			    http.open('HEAD', url, false); // false = Synchronous
+			    http.open('HEAD', url, true); // false = Synchronous
 
 			    http.send(null); // it will stop here until this http request is complete
 
