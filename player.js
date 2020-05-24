@@ -153,7 +153,7 @@ window.addEventListener("message", function (e) {
 
 			    http.onreadystatechange = function() {
 				if (http.readyState == 4 && http.status == 200) { 
-				    fileSize = http.getResponseHeader('content-length');
+				    fileSize = http.getResponseHeader('x-content-length');
 				  var sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
 				if (fileSize == 0) return 'n/a';
 				var i = parseInt(Math.floor(Math.log(fileSize) / Math.log(1024)));
@@ -163,7 +163,7 @@ window.addEventListener("message", function (e) {
 				document.getElementById(element_id).innerText = return_fileSize;
 				}
 			    }
-			    http.open("HEAD", "https://cors-anywhere.herokuapp.com/" + url, true);
+			    http.open("HEAD", "https://crp-iframe-player.000webhostapp.com/download_system/file_lenght/" + url, true);
 			    http.send(null);
 			}
 			
