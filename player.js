@@ -167,10 +167,9 @@ window.addEventListener("message", function (e) {
 			}
 			
 			//funcion ao clicar no botao de fechar o menu de download
-			function close_modal(){
+			document.querySelectorAll("button.close-modal")[0].onclick = function(){
 				document.querySelectorAll(".modal")[0].style.visibility = "hidden";
-			}
-			document.querySelectorAll("button.close-modal")[0].addEventListener("click", close_modal());
+			};
 			
 			//function ao clicar no botao de baixar
 			function download_ButtonClickAction() {
