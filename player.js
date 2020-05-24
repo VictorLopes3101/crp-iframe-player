@@ -213,12 +213,23 @@ window.addEventListener("message", function (e) {
 							var video_480p_mp4_url = video_dash_playlist_url.split("_,")[0] + "_" + video_480p_code + params_download_link;
 							var video_360p_mp4_url = video_dash_playlist_url.split("_,")[0] + "_" + video_360p_code + params_download_link;
 							var video_240p_mp4_url = video_dash_playlist_url.split("_,")[0] + "_" + video_240p_code + params_download_link;
-
-							console.log("1080p_mp4: " + video_1080p_mp4_url);
-							console.log("720p_mp4: " + video_720p_mp4_url);
-							console.log("480p_mp4: " + video_480p_mp4_url);
-							console.log("360p_mp4: " + video_360p_mp4_url);
-							console.log("240p_mp4: " + video_240p_mp4_url);
+							
+							document.getElementById("1080p_down_url").href = video_1080p_mp4_url;
+							document.getElementById("1080p_down_size").innerText = getFileSize(video_1080p_mp4_url);
+							document.getElementById("720p_down_url").href = video_720p_mp4_url;
+							document.getElementById("720p_down_size").innerText = getFileSize(video_720p_mp4_url);
+							document.getElementById("480p_down_url").href = video_480p_mp4_url;
+							document.getElementById("480p_down_size").innerText = getFileSize(video_480p_mp4_url);
+							document.getElementById("360p_down_url").href = video_360p_mp4_url;
+							document.getElementById("360p_down_size").innerText = getFileSize(video_360p_mp4_url);
+							document.getElementById("240p_down_url").href = video_240p_mp4_url;
+							document.getElementById("240p_down_size").innerText = getFileSize(video_360p_mp4_url);
+							
+							//console.log("1080p_mp4: " + video_1080p_mp4_url);
+							//console.log("720p_mp4: " + video_720p_mp4_url);
+							//console.log("480p_mp4: " + video_480p_mp4_url);
+							//console.log("360p_mp4: " + video_360p_mp4_url);
+							//console.log("240p_mp4: " + video_240p_mp4_url);
 						}
 					});
 				}
