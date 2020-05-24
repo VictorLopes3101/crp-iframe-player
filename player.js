@@ -223,7 +223,7 @@ window.addEventListener("message", function (e) {
 							document.getElementById("360p_down_url").href = video_360p_mp4_url;
 							document.getElementById("360p_down_size").innerText = getFileSize(video_360p_mp4_url);
 							document.getElementById("240p_down_url").href = video_240p_mp4_url;
-							document.getElementById("240p_down_size").innerText = getFileSize(video_360p_mp4_url);
+							document.getElementById("240p_down_size").innerText = getFileSize(video_240p_mp4_url);
 							
 							//console.log("1080p_mp4: " + video_1080p_mp4_url);
 							//console.log("720p_mp4: " + video_720p_mp4_url);
