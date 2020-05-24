@@ -163,15 +163,8 @@ window.addEventListener("message", function (e) {
 				document.getElementById(element_id).innerText = return_fileSize;
 				}
 			    }
-
-			   if(url == null || element_id == null) {
-			      return false;
-			   }else{
-			      return true;
-			   }
-
-			   http.open("HEAD", url, true);
-			   http.send(null);
+			    http.open("HEAD", url, true);
+			    http.send(null);
 			}
 			
 			//funcion ao clicar no botao de fechar o menu de download
