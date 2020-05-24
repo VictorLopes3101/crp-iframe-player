@@ -15,13 +15,6 @@
     url("fonts/SFProDisplay-Semibold.svg#SFProDisplay-Semibold") format("svg"); /* iOS 4.1- */
 }
 
-@media screen and (max-width: 812px), screen and (max-device-width: 812px) {
-	.modal {
-		height: 175px!important;
-		overflow: auto!important;
-	}
-}
-
 ::-webkit-scrollbar {
     width: 8px!important;
 }
