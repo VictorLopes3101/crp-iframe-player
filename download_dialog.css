@@ -39,6 +39,7 @@
     border: none;
     position: absolute;
     font-size: 20px;
+    cursor: pointer;
     right: 10px;
     top: 10px;
     color: #334;
