@@ -166,14 +166,17 @@ window.addEventListener("message", function (e) {
 			    return (fileSize / Math.pow(1024, i)).toFixed(1) + ' ' + sizes[i];
 			}
 			
+			//funcion ao clicar no botao de fechar o menu de download
+			function close_modal(){
+				document.querySelectorAll(".modal")[0].style.visibility = "hidden";
+			}
+			document.querySelectorAll("button.close-modal")[0].addEventListener("click", close_modal());
+			
 			//function ao clicar no botao de baixar
 			function download_ButtonClickAction() {
-				//var link = document.createElement("a");
-			        //link.download = "video";
-			        //link.href = "https://video.com/video.mp4";
-			        //link.click(); 
 				
-				alert("O Sistema de download não está disponivel ainda, por favor aguarde ^^");
+				//Mostra o menu de download
+				document.querySelectorAll(".modal")[0].style.visibility = "visible";
 				
 				//Pega a url da playlist atual
 				player_current_playlist = jwplayer().getPlaylist()[0].file;
