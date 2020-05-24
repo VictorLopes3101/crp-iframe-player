@@ -17,17 +17,17 @@
 
 @media screen and (max-width: 812px), screen and (max-device-width: 812px) {
 	.modal {
-		height: 175px;
-		overflow: auto;
+		height: 175px!important;
+		overflow: auto!important;
 	}
 	::-webkit-scrollbar {
-	    width: 9px;
+	    width: 9px!important;
 	}
 	::-webkit-scrollbar-thumb {
-	    background: #888;
+	    background: #888!important;
 	}
 	::-webkit-scrollbar-track {
-	    background: #a7a7a7;
+	    background: #a7a7a7!important;
 	}
 }
 
