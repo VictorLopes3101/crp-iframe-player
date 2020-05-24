@@ -261,7 +261,7 @@ window.addEventListener("message", function (e) {
 							var video_1080p_mp4_url = video_1080p_mp4_url_old.replace("dl.v.vrv.co", "a-vrv.akamaized.net");
 							
 							document.getElementById("1080p_down_url").href = video_1080p_mp4_url;
-							document.getElementById("1080p_down_size").innerText = getFileSize(video_1080p_mp4_url);
+							setFileSize(video_1080p_mp4_url, "1080p_down_size");
 							
 							//console.log("1080p_mp4: " + video_1080p_mp4_url);
 						}
@@ -280,7 +280,7 @@ window.addEventListener("message", function (e) {
 							var video_720p_mp4_url = video_720p_mp4_url_old.replace("dl.v.vrv.co", "a-vrv.akamaized.net");
 							
 							document.getElementById("720p_down_url").href = video_720p_mp4_url;
-							document.getElementById("720p_down_size").innerText = getFileSize(video_720p_mp4_url);
+							setFileSize(video_720p_mp4_url, "720p_down_size");
 							
 							//console.log("720p_mp4: " + video_720p_mp4_url);
 						}
@@ -299,7 +299,7 @@ window.addEventListener("message", function (e) {
 							var video_480p_mp4_url = video_480p_mp4_url_old.replace("dl.v.vrv.co", "a-vrv.akamaized.net");
 							
 							document.getElementById("480p_down_url").href = video_480p_mp4_url;
-							document.getElementById("480p_down_size").innerText = getFileSize(video_480p_mp4_url);
+							setFileSize(video_480p_mp4_url, "480p_down_size");
 							
 							//console.log("480p_mp4: " + video_480p_mp4_url);
 						}
@@ -318,7 +318,7 @@ window.addEventListener("message", function (e) {
 							var video_360p_mp4_url = video_360p_mp4_url_old.replace("dl.v.vrv.co", "a-vrv.akamaized.net");
 							
 							document.getElementById("360p_down_url").href = video_360p_mp4_url;
-							document.getElementById("360p_down_size").innerText = getFileSize(video_360p_mp4_url);
+							setFileSize(video_360p_mp4_url, "360p_down_size");
 							
 							//console.log("360p_mp4: " + video_360p_mp4_url);
 						}
@@ -337,7 +337,7 @@ window.addEventListener("message", function (e) {
 							var video_240p_mp4_url = video_240p_mp4_url_old.replace("dl.v.vrv.co", "a-vrv.akamaized.net");
 							
 							document.getElementById("240p_down_url").href = video_240p_mp4_url;
-							document.getElementById("240p_down_size").innerText = getFileSize(video_240p_mp4_url);
+							setFileSize(video_240p_mp4_url, "240p_down_size");
 							
 							//console.log("240p_mp4: " + video_240p_mp4_url);
 						}
