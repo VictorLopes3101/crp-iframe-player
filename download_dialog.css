@@ -20,17 +20,17 @@
 		height: 175px!important;
 		overflow: auto!important;
 	}
-	::-webkit-scrollbar {
-	    width: 8px!important;
-	}
-	::-webkit-scrollbar-thumb {
-	    background: #888!important;
-	}
-	::-webkit-scrollbar-track {
-	    background: #a7a7a7!important;
-	}
 }
 
+::-webkit-scrollbar {
+    width: 8px!important;
+}
+::-webkit-scrollbar-thumb {
+    background: #888!important;
+}
+::-webkit-scrollbar-track {
+    background: #a7a7a7!important;
+}
 .modal {
     background: #eeeaea;
     text-align: center;
