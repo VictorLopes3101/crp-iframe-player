@@ -146,21 +146,29 @@ window.addEventListener("message", function (e) {
 			}
 			
 			//funcion que pega o tamanho de um arquivo pela url
-			function getFileSize(url) {
+			function setFileSize(url, element_id) {
 			   // Fallback to Microsoft.XMLHTTP if XMLHttpRequest does not exist.
-			   var http = (window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP"));
 			   var fileSize = "";
+			   var http = (window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP"));
 
 			    http.onreadystatechange = function() {
-				if (http.readyState == 4 && http.status == 200) {	
+				if (http.readyState == 4 && http.status == 200) { 
 				    fileSize = http.getResponseHeader('content-length');
-					var sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
-					    if (fileSize == 0) return 'n/a';
-					    var i = parseInt(Math.floor(Math.log(fileSize) / Math.log(1024)));
-					    if (i == 0) return fileSize + ' ' + sizes[i];
-					    return (fileSize / Math.pow(1024, i)).toFixed(1) + ' ' + sizes[i];
+				  var sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
+				if (fileSize == 0) return 'n/a';
+				var i = parseInt(Math.floor(Math.log(fileSize) / Math.log(1024)));
+				if (i == 0) return fileSize + ' ' + sizes[i];
+
+				var return_fileSize = (fileSize / Math.pow(1024, i)).toFixed(1) + ' ' + sizes[i];
+				document.getElementById(element_id).innerText = return_fileSize;
 				}
 			    }
+
+			   if(url == null || element_id == null) {
+			      return false;
+			   }else{
+			      return true;
+			   }
 
 			   http.open("HEAD", url, true);
 			   http.send(null);
@@ -219,15 +227,15 @@ window.addEventListener("message", function (e) {
 							var video_240p_mp4_url = video_dash_playlist_url.split("_,")[0] + "_" + video_240p_code + params_download_link;
 							
 							document.getElementById("1080p_down_url").href = video_1080p_mp4_url;
-							document.getElementById("1080p_down_size").innerText = getFileSize(video_1080p_mp4_url);
+							setFileSize(video_1080p_mp4_url, "1080p_down_size");
 							document.getElementById("720p_down_url").href = video_720p_mp4_url;
-							document.getElementById("720p_down_size").innerText = getFileSize(video_720p_mp4_url);
+							setFileSize(video_720p_mp4_url, "720p_down_size");
 							document.getElementById("480p_down_url").href = video_480p_mp4_url;
-							document.getElementById("480p_down_size").innerText = getFileSize(video_480p_mp4_url);
+							setFileSize(video_480p_mp4_url, "480p_down_size");
 							document.getElementById("360p_down_url").href = video_360p_mp4_url;
-							document.getElementById("360p_down_size").innerText = getFileSize(video_360p_mp4_url);
+							setFileSize(video_360p_mp4_url, "360p_down_size");
 							document.getElementById("240p_down_url").href = video_240p_mp4_url;
-							document.getElementById("240p_down_size").innerText = getFileSize(video_240p_mp4_url);
+							setFileSize(video_240p_mp4_url, "240p_down_size");
 							
 							//console.log("1080p_mp4: " + video_1080p_mp4_url);
 							//console.log("720p_mp4: " + video_720p_mp4_url);
