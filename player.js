@@ -175,6 +175,12 @@ window.addEventListener("message", function (e) {
 			//function ao clicar no botao de baixar
 			function download_ButtonClickAction() {
 				
+				//Se estiver no mobile, muda um pouco o design do menu
+				if (typeof window.orientation !== 'undefined') {
+					document.querySelectorAll(".modal")[0].style.height = "175px!important";
+					document.querySelectorAll(".modal")[0].style.overflow = "auto";
+				}
+				
 				//Mostra o menu de download
 				document.querySelectorAll(".modal")[0].style.visibility = "visible";
 				
