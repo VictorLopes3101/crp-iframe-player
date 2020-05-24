@@ -175,8 +175,6 @@ window.addEventListener("message", function (e) {
 			//function ao clicar no botao de baixar
 			function download_ButtonClickAction() {
 				
-				alert("O Sistema de Download de episodios está em teste nesse momento, bugs podem acontecer.");
-				
 				//Mostra o menu de download
 				document.querySelectorAll(".modal")[0].style.visibility = "visible";
 				
