@@ -149,6 +149,7 @@ window.addEventListener("message", function (e) {
 			function getFileSize(url) {
 			   // Fallback to Microsoft.XMLHTTP if XMLHttpRequest does not exist.
 			   var http = (window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP"));
+			   var fileSize = "";
 
 			    http.onreadystatechange = function() {
 				if (http.readyState == 4 && http.status == 200) {	
