@@ -153,7 +153,7 @@ window.addEventListener("message", function (e) {
 
 			    http.onreadystatechange = function() {
 				if (http.readyState == 4 && http.status == 200) { 
-				    fileSize = http.getResponseHeader('x-content-length');
+				    fileSize = http.getResponseHeader('content-length');
 				  var sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
 				if (fileSize == 0) return 'n/a';
 				var i = parseInt(Math.floor(Math.log(fileSize) / Math.log(1024)));
