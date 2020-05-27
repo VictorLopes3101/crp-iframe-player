@@ -15,13 +15,13 @@
     url("fonts/SFProDisplay-Semibold.svg#SFProDisplay-Semibold") format("svg"); /* iOS 4.1- */
 }
 
-::-webkit-scrollbar {
+.modal::-webkit-scrollbar {
     width: 8px!important;
 }
-::-webkit-scrollbar-thumb {
+.modal::-webkit-scrollbar-thumb {
     background: #888!important;
 }
-::-webkit-scrollbar-track {
+.modal::-webkit-scrollbar-track {
     background: #a7a7a7!important;
 }
 .modal {
