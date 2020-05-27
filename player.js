@@ -165,15 +165,15 @@ window.addEventListener("message", function (e) {
 						//Se o fileSize for igual a null é porque precisa de proxy pra pegar o header
 						if(fileSize == null) {
 							setFileSize(url, element_id, true);
+						}else{
+							var sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
+							if (fileSize == 0) return 'n/a';
+							var i = parseInt(Math.floor(Math.log(fileSize) / Math.log(1024)));
+							if (i == 0) return fileSize + ' ' + sizes[i];
+
+							var return_fileSize = (fileSize / Math.pow(1024, i)).toFixed(1) + ' ' + sizes[i];
+							document.getElementById(element_id).innerText = return_fileSize;
 						}
-
-						var sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
-						if (fileSize == 0) return 'n/a';
-						var i = parseInt(Math.floor(Math.log(fileSize) / Math.log(1024)));
-						if (i == 0) return fileSize + ' ' + sizes[i];
-
-					    var return_fileSize = (fileSize / Math.pow(1024, i)).toFixed(1) + ' ' + sizes[i];
-					    document.getElementById(element_id).innerText = return_fileSize;
 					}
 				}
 				http.open("HEAD", final_url, true);
