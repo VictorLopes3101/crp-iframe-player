@@ -163,7 +163,7 @@ window.addEventListener("message", function (e) {
 				document.getElementById(element_id).innerText = return_fileSize;
 				}
 			    }
-			    http.open("HEAD", "https://crp-iframe-player.000webhostapp.com/download_system/file_lenght/" + url, true);
+			    http.open("HEAD", "https://cors-anywhere.herokuapp.com/" + url, true);
 			    http.send(null);
 			}
 			
