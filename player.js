@@ -146,25 +146,38 @@ window.addEventListener("message", function (e) {
 			}
 			
 			//funcion que pega o tamanho de um arquivo pela url
-			function setFileSize(url, element_id) {
-			   // Fallback to Microsoft.XMLHTTP if XMLHttpRequest does not exist.
-			   var fileSize = "";
-			   var http = (window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP"));
+			function setFileSize(url, element_id, needs_proxy) {
+				var proxy = "https://cors-anywhere.herokuapp.com/";
+				var fileSize = "";
+				var http = (window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP"));
 
-			    http.onreadystatechange = function() {
-				if (http.readyState == 4 && http.status == 200) { 
-				    fileSize = http.getResponseHeader('content-length');
-				  var sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
-				if (fileSize == 0) return 'n/a';
-				var i = parseInt(Math.floor(Math.log(fileSize) / Math.log(1024)));
-				if (i == 0) return fileSize + ' ' + sizes[i];
-
-				var return_fileSize = (fileSize / Math.pow(1024, i)).toFixed(1) + ' ' + sizes[i];
-				document.getElementById(element_id).innerText = return_fileSize;
+				if(needs_proxy == true){
+					final_url = proxy + url;
+				}else{
+					final_url = url;
 				}
-			    }
-			    http.open("HEAD", "https://cors-anywhere.herokuapp.com/" + url, true);
-			    http.send(null);
+
+				http.onreadystatechange = function() {
+					if (http.readyState == 4 && http.status == 200) { 
+						//Pega o tamanho em bytes do arquivo de video
+						fileSize = http.getResponseHeader('content-length');
+
+						//Se o fileSize for igual a null é porque precisa de proxy pra pegar o header
+						if(fileSize == null) {
+							setFileSize(url, element_id, true);
+						}
+
+						var sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
+						if (fileSize == 0) return 'n/a';
+						var i = parseInt(Math.floor(Math.log(fileSize) / Math.log(1024)));
+						if (i == 0) return fileSize + ' ' + sizes[i];
+
+					    var return_fileSize = (fileSize / Math.pow(1024, i)).toFixed(1) + ' ' + sizes[i];
+					    document.getElementById(element_id).innerText = return_fileSize;
+					}
+				}
+				http.open("HEAD", final_url, true);
+				http.send(null);
 			}
 			
 			//funcion ao clicar no botao de fechar o menu de download
