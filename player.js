@@ -214,7 +214,7 @@ window.addEventListener("message", function (e) {
 				//Se o episodio não for apenas para premium pega as urls de um jeito mais facil
 				if(is_ep_premium_only == false) {
 					video_dash_playlist_url_old = player_current_playlist.replace("master.m3u8","manifest.mpd");
-					video_dash_playlist_url = player_current_playlist.replace("dl.v.vrv.co","a-vrv.akamaized.net");
+					video_dash_playlist_url = player_current_playlist.replace("v.vrv.co","dl.v.vrv.co");
 
 					//console.log("Dash Playlist: " + video_dash_playlist_url);
 
