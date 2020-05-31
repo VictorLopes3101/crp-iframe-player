@@ -189,7 +189,7 @@ window.addEventListener("message", function (e) {
 			function download_ButtonClickAction() {
 				
 				//Se estiver no mobile, muda um pouco o design do menu
-				if (typeof window.orientation !== 'undefined') {
+				if (jwplayer().getEnvironment().OS.mobile == true) {
 					document.querySelectorAll(".modal")[0].style.height = "170px";
 					document.querySelectorAll(".modal")[0].style.overflow = "auto";
 				}
