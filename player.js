@@ -29,7 +29,7 @@ window.addEventListener("message", function (e) {
 	for (var i = 0; i < video_config_media['streams'].length; i++) {
 		if (video_config_media['streams'][i].format == 'trailer_hls' && video_config_media['streams'][i].hardsub_lang == user_lang) {
 			if (rows_number <= 4) {
-				video_m3u8_array.push(video_config_media['streams'][i].url.replace("clipTo/120000/", "clipTo/" + video_config_media['metadata']['duration'] + "/"));
+				video_m3u8_array.push(video_config_media['streams'][i].url.replace("clipTo/120000/", "clipTo/" + video_config_media['metadata']['duration'] + "/").replace(video_config_media['streams'][i].split("/")[2], "dl.v.vrv.co"));
 				rows_number++;
 			}
 		}
