@@ -88,3 +88,12 @@ video {
 .corta_linha {
 	display: block;
 }
+
+.creator-message span {
+	color: white;
+}
+
+.creator-message {
+	padding: 12px 12px;
+    	background-color: #323232;
+}
