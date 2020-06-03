@@ -95,6 +95,7 @@ video {
 }
 
 .creator-message {
+	display: none;
 	font-family: 'Roboto', sans-serif;
 	background-color: #323232;
 	padding: 12px 12px;
