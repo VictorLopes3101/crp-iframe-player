@@ -381,6 +381,15 @@ window.addEventListener("message", function (e) {
 					jwplayer().play();
 				}
 			});
+			//Mostra mensagem do criador da extensão.
+			jwplayer().on('firstFrame', function (e) {
+				creator_message = document.createElement("div");
+				creator_message.setAttribute("class", "creator-message");
+				creator_message.innerHTML = '<span>Estensão Criada Por @itallolegal</span><br><span>Caso encontre algum bug, reporte nos comentários do meu canal.</span>';
+				document.querySelectorAll(".jw-overlays.jw-reset")[0].appendChild(creator_message);
+				
+				console.log("Mostra creator-message");
+			});
 			//Fica salvando o tempo do video a cada 5 segundos.
 			const save_player_time_interval = setInterval(function () {
 				if (jwplayer().getState() == "playing") {
