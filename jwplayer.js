@@ -6242,7 +6242,7 @@ var jwDefaults = {
     "ph": 1,
     "pid": "fZm9LXdH",
     "preload": "metadata",
-    "repeat": false,
+    "repeat": true,
     "stagevideo": false,
     "stretching": "uniform",
     "width": "100%"
