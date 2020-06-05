@@ -6239,7 +6239,7 @@ var jwDefaults = {
     "controls": true,
     "displaydescription": true,
     "displaytitle": true,
-    "flashplayer": "//ssl.p.jwpcdn.com/player/v/8.11.5/jwplayer.flash.swf",
+    "flashplayer": "//ssl.p.jwpcdn.com/player/v/8.15.1/jwplayer.flash.swf",
     "height": "100%",
     "key": "HqE2/0IyhJqu2y7v3+2yaep3CekuEc3IfNj49TjEY/I70tmhlosPJRB1/58=",
     "ph": 1,
