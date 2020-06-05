@@ -1,4 +1,4 @@
-8.11.5/*!
+/*!
    JW Player version 8.11.5
    Copyright (c) 2019, JW Player, All Rights Reserved 
    This source code and its use and distribution is subject to the terms 
