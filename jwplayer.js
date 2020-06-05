@@ -6233,6 +6233,9 @@ window.jwplayer = function(t) {
 var jwDefaults = {
     "aspectratio": "16:9",
     "autostart": false,
+    "cast": {
+        "appid": "00000000"
+    },
     "controls": true,
     "displaydescription": true,
     "displaytitle": true,
