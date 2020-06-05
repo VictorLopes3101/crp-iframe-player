@@ -1,11 +1,11 @@
-/*!
-   JW Player version 8.15.1
+8.11.5/*!
+   JW Player version 8.11.5
    Copyright (c) 2019, JW Player, All Rights Reserved 
    This source code and its use and distribution is subject to the terms 
    and conditions of the applicable license agreement. 
    https://www.jwplayer.com/tos/
    This product includes portions of other software. For the full text of licenses, see
-   https://ssl.p.jwpcdn.com/player/v/8.15.1/notice.txt
+   https://ssl.p.jwpcdn.com/player/v/8.11.5/notice.txt
 */
 window.jwplayer = function(t) {
     function e(e) {
@@ -2330,7 +2330,7 @@ window.jwplayer = function(t) {
             return ""
         },
         u = function() {
-            var t = "//ssl.p.jwpcdn.com/player/v/8.15.1/",
+            var t = "//ssl.p.jwpcdn.com/player/v/8.11.5/",
                 e = Object(i.isFileProtocol)() ? "https:" : "";
             return "".concat(e).concat(t)
         },
@@ -2845,7 +2845,7 @@ window.jwplayer = function(t) {
     n.d(e, "a", (function() {
         return r
     }));
-    var r = "8.15.1+commercial_v8-11-5.361.commercial.3d278e6.hlsjs..hlsjsprogressive..jwplayer.a867eca.dai.45542e3.freewheel.556af86.googima.2d3f0d0.vast.251ce8e.analytics.240f559.gapro.141397a"
+    var r = "8.11.5+commercial_v8-11-5.361.commercial.3d278e6.hlsjs..hlsjsprogressive..jwplayer.a867eca.dai.45542e3.freewheel.556af86.googima.2d3f0d0.vast.251ce8e.analytics.240f559.gapro.141397a"
 }, function(t, e, n) {
     "use strict";
     var r = n(0),
@@ -4507,7 +4507,7 @@ window.jwplayer = function(t) {
     }
 
     function O(t) {
-        var e = "file:" === window.location.protocol ? "https:" : "", n = { jwpsrv: "//ssl.p.jwpcdn.com/player/v/8.15.1/jwpsrv.js", dai: "//ssl.p.jwpcdn.com/player/plugins/dai/v/0.4.9/dai.js", vast: "//ssl.p.jwpcdn.com/player/plugins/vast/v/8.7.3/vast.js", googima: "//ssl.p.jwpcdn.com/player/plugins/googima/v/8.7.2/googima.js", freewheel: "//ssl.p.jwpcdn.com/player/plugins/freewheel/v/2.2.6/freewheel.js", gapro: "//ssl.p.jwpcdn.com/player/plugins/gapro/v/2.1.5/gapro.js" } [t]; return n ? e + n : "" }
+        var e = "file:" === window.location.protocol ? "https:" : "", n = { jwpsrv: "//ssl.p.jwpcdn.com/player/v/8.11.5/jwpsrv.js", dai: "//ssl.p.jwpcdn.com/player/plugins/dai/v/0.4.9/dai.js", vast: "//ssl.p.jwpcdn.com/player/plugins/vast/v/8.7.3/vast.js", googima: "//ssl.p.jwpcdn.com/player/plugins/googima/v/8.7.2/googima.js", freewheel: "//ssl.p.jwpcdn.com/player/plugins/freewheel/v/2.2.6/freewheel.js", gapro: "//ssl.p.jwpcdn.com/player/plugins/gapro/v/2.1.5/gapro.js" } [t]; return n ? e + n : "" }
 
     function k(t, e, n) {
         e && (t[e.client || O(n)] = e, delete e.client)
@@ -6239,7 +6239,7 @@ var jwDefaults = {
     "controls": true,
     "displaydescription": true,
     "displaytitle": true,
-    "flashplayer": "//ssl.p.jwpcdn.com/player/v/8.15.1/jwplayer.flash.swf",
+    "flashplayer": "//ssl.p.jwpcdn.com/player/v/8.11.5/jwplayer.flash.swf",
     "height": "100%",
     "key": "HqE2/0IyhJqu2y7v3+2yaep3CekuEc3IfNj49TjEY/I70tmhlosPJRB1/58=",
     "ph": 1,
