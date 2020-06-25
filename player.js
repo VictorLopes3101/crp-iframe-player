@@ -386,7 +386,7 @@ window.addEventListener("message", function (e) {
 				//Cria a mensagem com javascript para aparecer dentro dos overlays do jwplayer
 				creator_message = document.createElement("div");
 				creator_message.setAttribute("class", "creator-message");
-				creator_message.innerHTML = '<span>Estensão Criada Por @itallolegal</span><br><span>Caso encontre algum bug, reporte nos comentários do meu canal.</span>';
+				creator_message.innerHTML = '<span>Extensão Criada Por @itallolegal</span><br><span>Caso encontre algum bug, reporte nos comentários do meu canal.</span>';
 				document.querySelectorAll(".jw-overlays.jw-reset")[0].appendChild(creator_message);
 				
 				//Mostra mensagem e esconde depois de 4s
