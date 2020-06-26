@@ -44,7 +44,7 @@ function importPlayer(){
 		//Remove avisos q o video nn pode ser visto
 		if(document.body.querySelector(".showmedia-trailer-notice") != null){
 			console.log("[CR Premium] Removendo Trailer Notice...");
-			document.body.querySelector(".showmedia-trailer-notice").style.textDecoration = "line-through";
+			document.body.querySelector(".showmedia-trailer-notice").style.display = "none";
 		}
 
 		//Remove sugestão de inscrever-se para o trial gratuito
@@ -52,6 +52,7 @@ function importPlayer(){
 			console.log("[CR Premium] Removendo Free Trial Signup...");
 			document.body.querySelector("#showmedia_free_trial_signup").style.display = "none";
 		}
+		
 
 		ifrm.onload = function(){
 			ifrm.contentWindow.postMessage({
