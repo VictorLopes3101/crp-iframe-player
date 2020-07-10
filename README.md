@@ -25,6 +25,7 @@ Você pode encontrar a última versão disponível aqui:
 ![Carregando extensão para o navegador](https://github.com/Hyper1025/crp-iframe-player/blob/master/Screenshots/instalacao-4.png?raw=true)
 6. Se você fez tudo certo, você deverá ver algo assim no seu navegador 
 ![Detalhes da extensão instalada](https://github.com/Hyper1025/crp-iframe-player/blob/master/Screenshots/instalacao-5.png?raw=true)
+<img src="https://github.com/Hyper1025/crp-iframe-player/blob/master/Screenshots/instalacao-5.png?raw=true"/>
 7. Agora é só assistir 😉
 
 Obrigado por utilizar.
