@@ -24,7 +24,7 @@ Você pode encontrar a última versão disponível aqui:
 5. Escolha a pasta que extraímos no começo do tutorial, e clique em Selecionar pasta
 ![Carregando extensão para o navegador](https://github.com/Hyper1025/crp-iframe-player/blob/master/Screenshots/instalacao-4.png?raw=true)
 6. Se você fez tudo certo, você deverá ver algo assim no seu navegador 
-![enter image description here](https://github.com/Hyper1025/crp-iframe-player/blob/master/Screenshots/instalacao-5.png?raw=true)
+![Detalhes da extensão instalada](https://github.com/Hyper1025/crp-iframe-player/blob/master/Screenshots/instalacao-5.png?raw=true)
 7. Agora é só assistir 😉
 
 Obrigado por utilizar.
