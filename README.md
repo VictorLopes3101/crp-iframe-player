@@ -14,7 +14,6 @@ Você pode encontrar a última versão disponível aqui:
 # Como instalar?
 
  1. Faça o [download](#download) do arquivo "Crunchyroll_Premium.zip", e extraia-o
-![Extraindo arquivo baixado](https://github.com/Hyper1025/crp-iframe-player/blob/master/Screenshots/instalacao-3.png?raw=true)
 <img alt="Extraindo arquivo baixado" src="https://github.com/Hyper1025/crp-iframe-player/blob/master/Screenshots/instalacao-3.png?raw=true"/>
  2. Abra o seu navegador
  3. Clique nos três pontos que estão na parte superior direita da janela do navegador. Vá em Mais Ferramentas, e clique em "Extensões" 
