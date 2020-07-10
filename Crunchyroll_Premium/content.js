@@ -21,7 +21,7 @@ function importPlayer(){
     	console.log("[CR Premium] Adicionando o jwplayer...");
     	ifrm = document.createElement("iframe");
     	ifrm.setAttribute("id", "frame"); 
-		ifrm.setAttribute("src", "https://hyper1025.github.io/crp-iframe-player/"); 
+		ifrm.setAttribute("src", "https://itallolegal.github.io/crp-iframe-player/"); 
 		ifrm.setAttribute("width","100%");
 		ifrm.setAttribute("height","100%");
 		ifrm.setAttribute("frameborder","0");
