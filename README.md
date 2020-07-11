@@ -17,7 +17,7 @@ Você pode encontrar a última versão disponível aqui:
  ![Extraindo arquivo baixado](https://raw.githubusercontent.com/itallolegal/crp-iframe-player/master/Screenshots/instalacao-3.png?raw=true)
  2. Abra o seu navegador (Apenas navegadores baseados em Chromium)
  3. Clique nos três pontos que estão na parte superior direita da janela do navegador. Vá em Mais Ferramentas, e clique em "Extensões" 
- ![Abrindo gerenciador de extensões](https://raw.githubusercontent.com/itallolegal/crp-iframe-player/master/Screenshots/instalacao-1.png?raw=true){:style="float: right"}
+ ![Abrindo gerenciador de extensões](https://raw.githubusercontent.com/itallolegal/crp-iframe-player/master/Screenshots/instalacao-1.png?raw=true)
  4. Habilite o "Modo programador", e então clique em "Carregar expandida"
  ![Habilitando modo programador, e carregando extensão](https://raw.githubusercontent.com/itallolegal/crp-iframe-player/master/Screenshots/instalacao-2.png?raw=true)
  5. Escolha a pasta que extraímos no começo do tutorial, e clique em "Selecionar pasta"
