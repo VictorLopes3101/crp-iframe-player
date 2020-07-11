@@ -131,7 +131,7 @@ window.addEventListener("message", function (e) {
 			});
 			
 			//Variaveis para o botao de baixar.
-			var button_iconPath = "download_icon.svg";
+			var button_iconPath = "assets/icon/download_icon.svg";
 			var button_tooltipText = "Baixar Vídeo";
 			var buttonId = "download-video-button";
 			
