@@ -11,7 +11,7 @@ Você pode encontrar a última versão disponível aqui:
 
 ![Extensão](https://raw.githubusercontent.com/itallolegal/crp-iframe-player/master/Screenshots/01.png?raw=true)
 
-# Como instalar?
+# Como instalar? (PC)
 
  1. Faça o [download](#download) do arquivo "Crunchyroll_Premium.zip", e extraia-o
  ![Extraindo arquivo baixado](https://raw.githubusercontent.com/itallolegal/crp-iframe-player/master/Screenshots/instalacao-3.png?raw=true)
@@ -25,5 +25,19 @@ Você pode encontrar a última versão disponível aqui:
  6. Se você fez tudo certo, você deverá ver algo assim no seu navegador 
  ![Detalhes da extensão instalada](https://raw.githubusercontent.com/itallolegal/crp-iframe-player/master/Screenshots/instalacao-5.png?raw=true)
  7. Agora é só assistir 😉
+
+# Como instalar? (ANDROID)
+ 1. Faça o [download](#download) do arquivo "Crunchyroll_Premium_Kiwi-Browser.zip", não precisa extrair
+ 2. Baixe e instale o navegador "Kiwi Browser", disponível no [Google Play Store](https://play.app.goo.gl/?link=https://play.google.com/store/apps/details?id=com.kiwibrowser.browser&ddl=1&pcampaignid=web_ddl_1)
+![Kiwi Browser no google play store](https://raw.githubusercontent.com/itallolegal/crp-iframe-player/master/Screenshots/instalacao-kiwi-1.png?raw=true)
+ 3. Abra o Kiwi Browser
+ 4. Clique nos três pontos que estão na parte superior direita da janela do navegador e clique em "Extensões"
+![Abrindo gerenciador de extensões](https://raw.githubusercontent.com/itallolegal/crp-iframe-player/master/Screenshots/instalacao-kiwi-2.png?raw=true)
+ 5. Habilite o "Modo do desenvolvedor", e então clique em "Load"
+![Habilitando modo programador, e carregando extensão](https://raw.githubusercontent.com/itallolegal/crp-iframe-player/master/Screenshots/instalacao-kiwi-3.png?raw=true)
+ 6. Escolha o arquivo .zip baixado no começo do tutorial
+ 7. Se você fez tudo certo, você deverá ver algo assim na tela
+![Detalhes da extensão instalada](https://raw.githubusercontent.com/itallolegal/crp-iframe-player/master/Screenshots/instalacao-kiwi-4.png?raw=true)
+ 8. Agora é só assistir 😉
 
 Obrigado por utilizar.
